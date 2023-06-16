@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;600;700&display=swap');
+*{
+    padding:0;
+    margin:0;
+}
+nav  a{
+    color:white;
+    text-decoration: none;
+}
+
+nav ul a > .current{
+    background-color: #7E4B11;
+}
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    background-color:black; //DBAC95
+    color:white;
+}
+header{
+    width:100%;
+    background-color:black;
+    color:white;
+    font-size:40px;
+    text-align:center;
+    /* position: fixed; */
+    top:0;
+    transition: 0.2s;
+}
+
+nav{
+    /* background-color:#F1AB86; */
+    border-shape:rectangle;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    overflow:hidden;
+    height:60px;
+
+}
+
+nav a{
+    box-sizing:border-box;
+    float: left;
+    display: block;
+    align-content:center;
+    margin:0;
+    padding:10px;
+    font-weight:600;
+    font-size:25px;
+    height:100%;
+}
+
+
+
+nav a:hover{
+    background-color:#7E4B11;
+    height:100%;
+    cursor:pointer;
+}
+
+nav a.current{
+
+    background-color:#7E4B11;
+}
+
+#headerImg{
+    justify-content:center;
+    float:left;
+    max-height:60px;
+}
+
+
+//https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
+//https://coolors.co/palette/0fa3b1-b5e2fa-f9f7f3-eddea4-f7a072
+//https://coolors.co/7e4b11-dbac95-f1ab86-f7dba7-9cafb7
