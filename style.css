@@ -8,6 +8,7 @@ a{
     color:white;
 }
 body{
+    padding-top:160px;
     min-wdith:375px;
     font-family: 'Titillium Web', sans-serif;
     text-align: center;
@@ -15,6 +16,12 @@ body{
     background-color:black; //DBAC95
     color:white;
 }
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:black;
+    }
 .header-icon{
     display:flex;
     flex-wrap:wrap;
@@ -46,7 +53,7 @@ body{
     }
     
     .header-links > a{
-        padding:20px;
+        padding:10px;
         font-size:25px;
     }
     

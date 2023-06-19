@@ -1,0 +1,90 @@
+form{
+    color:white;
+    font-weight:400;
+    font-size:20px;
+}
+
+label{
+    /* color:white; */
+}
+datalist {
+    padding-right:30vw;
+    padding-left:30vw;
+    width:40vw;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    writing-mode:sideways-lr;
+    /* width: 200px; */
+  }
+
+
+#rating{
+    //https://www.w3schools.com/howto/howto_js_rangeslider.asp
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 40vw; /* Full-width */
+    height: 20px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s; 
+    margin:15px;
+    border-radius:10px;
+}
+#rating::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius:50%; 
+    background: #feaa23;
+    cursor: pointer;
+  }
+
+
+textarea{
+    background-color:#000000;
+    color:#feaa23;
+    width:60vw;
+    margin-top:5px;
+    padding:20px;
+    resize:vertical;
+}
+
+select{
+    font-family: 'Titillium Web';
+    font-weight:600;
+}
+
+select>option:hover{
+    color:black;
+}
+
+input[type=submit]{
+    margin:10px;
+    background-color:#ae6f46;
+    color:white;
+    font-family: 'Titillium Web';
+    font-weight:600;
+    font-size:20px;
+    padding:10px 15px;
+    border-radius:15px;
+    border:none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color:#f1ae6f46;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border-radius: 20px;
+    padding-bottom:30px;
+    padding-left:20vw;
+    width:60vw;
+}  
