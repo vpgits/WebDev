@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-    hamburgMenu();
-  });
+// document.addEventListener("DOMContentLoaded", function() {
+//     hamburgMenu();
+//   });
 
 window.onscroll = function() {headerShrink()};
 
