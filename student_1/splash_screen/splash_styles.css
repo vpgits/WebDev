@@ -1,0 +1,6 @@
+#splash-screen {
+  background-image: url(/media/splash_screen_background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
