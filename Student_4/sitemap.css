@@ -1,0 +1,33 @@
+#w1{
+    width:100px;
+    height: 100px;
+}
+body{
+    margin:0;
+}
+rect{
+    fill:transparent;
+    stroke:grey;
+    stroke-width:5;
+}
+line{
+    stroke:#867f7f;
+    fill:none;
+    stroke-width: 5;
+}
+a:visited text{
+    color:aquamarine;
+}
+a:hover {
+    background-color: #f0f0f0;
+}
+
+
+a:hover text {
+    fill: blue;
+}
+
+
+a:hover image {
+    opacity: 0.5;
+}
