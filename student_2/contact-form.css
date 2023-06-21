@@ -1,5 +1,5 @@
 form{
-    color:white;
+    color:black;
     font-weight:400;
     font-size:20px;
 }
@@ -45,12 +45,12 @@ datalist {
 
 
 textarea{
-    background-color:#000000;
+    background-color:#ffffff;
     color:#feaa23;
     width:60vw;
     margin-top:5px;
     padding:20px;
-    resize:vertical;
+    resize: none;
 }
 
 select{
@@ -76,7 +76,7 @@ input[type=submit]{
 }
 
 input[type=submit]:hover{
-    background-color:#f1ae6f46;
+    background-color:#71482d;
 }
 
 .container{
