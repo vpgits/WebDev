@@ -1,5 +1,3 @@
-
-
 let slider = document.getElementById("rating-slider");
 let textArea  = document.getElementById("reason");
 let submit = document.getElementById("submit");
@@ -28,10 +26,6 @@ function validateForms(){
     return slider.classList.contains("valid") && textArea.classList.contains("valid");
 }
 
-
-
-// let isSliderAccessed = false;
-// let isTextareaAccessed = false;
 
 function validate(elementId){
 

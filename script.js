@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    setInterval(()=>{switchSlides(1,".slides")},8000);
+    switchSlides(1,".slides");
+    setInterval(()=>{switchSlides(1,".slides")},4000);
 
   });
 
@@ -56,6 +57,13 @@ const slides = document.querySelectorAll(classname);
     //   let element  = document.getElementById(".stage-active");
 
     // }
+    slides.forEach((slide, index) => {
+      if (index < 3) {
+        slide.classList.add("visible");
+      } else {
+        slide.classList.remove("visible");
+      }
+    });
 }
 
   

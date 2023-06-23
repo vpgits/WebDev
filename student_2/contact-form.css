@@ -93,7 +93,8 @@ input[type=submit]:hover{
 }  
 
 .invalid{
-    border: 1px solid #ccc;
-    border-color: red;
+    /* border: 1px solid #ccc;
+    border-color: red; */
     color:red;
 }
+
