@@ -1,3 +1,7 @@
+*{
+  margin:0;
+  padding:0;
+}
 #splash-screen {
   background-image: url(/student_1/student_1_media/splash_screen_background.jpg);
   background-position: center;

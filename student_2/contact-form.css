@@ -43,6 +43,9 @@ datalist {
     cursor: pointer;
   }
 
+#submit:disabled{
+    cursor:not-allowed;
+}
 
 textarea{
     background-color:#ffffff;
@@ -88,3 +91,9 @@ input[type=submit]:hover{
     padding-left:20vw;
     width:60vw;
 }  
+
+.invalid{
+    border: 1px solid #ccc;
+    border-color: red;
+    color:red;
+}
