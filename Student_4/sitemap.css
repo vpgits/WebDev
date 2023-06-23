@@ -1,14 +1,17 @@
+
 #w1{
     width:100px;
     height: 100px;
 }
 body{
     margin:0;
+    
 }
 rect{
     fill:transparent;
     stroke:grey;
     stroke-width:5;
+   
 }
 line{
     stroke:#867f7f;
@@ -19,7 +22,7 @@ a:visited text{
     color:aquamarine;
 }
 a:hover {
-    background-color: #f0f0f0;
+    background-color: #878484;
 }
 
 

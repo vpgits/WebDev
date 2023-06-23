@@ -1,10 +1,62 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lora", serif;
 }
-#splash-screen {
-  background-image: url(/student_1/student_1_media/splash_screen_background.jpg);
-  background-position: center;
-  background-size: cover;
+
+/* Center the splash screen and loading animation */
+.splash-screen {
+  background-color: #80b918;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+}
+
+/* Loader container */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  /* margin-top: auto; */
+}
+
+.loader-container img {
+  width: 200px;
+  height: 200px;
+}
+
+/* Loading animation */
+.loader {
+  margin-top: 170px;
+  width: 100px;
+  height: 100px;
+  border: 8px solid white;
+  border-top: 8px solid #5e5e5e;
+  border-bottom: 8px solid #5e5e5e;
+  border-radius: 50%;
+  animation: rotate 2s linear infinite;
+  margin-bottom: 30px;
+}
+
+/* Text */
+.text #website-name {
+  color: #5e5e5e;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.text #creators {
+  color: #5e5e5e;
+  font-size: 30px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
