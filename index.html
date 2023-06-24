@@ -15,6 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
       rel="stylesheet"
    >
+   <link rel="stylesheet" type="text/css" href="/student_1/splash_screen/splash_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+   >
 </head>
 <body>
     <header> 
@@ -23,7 +30,7 @@
                 <img id="headerImg" src="media/header.png" alt="icon">   
                 <a  ><span class="material-symbols-outlined" id="hamburgMenu">menu</span></a> 
             </div>
-            <div class="header-links" id="links">
+            <div class="header-links" id="links" style="display: none;">
                 <a href="index.html" class="current">Home</a>
                 <a href="studentOne.html">StudentOne</a>
                 <a href="studentTwo.html">StudentTwo</a>
@@ -32,52 +39,75 @@
                 <a href="aboutus.html">AboutUs</a>
             </div>
         </div>
-    </header>
-
-                    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-    <div class="slideshow">
-        <span class="material-symbols-outlined arrow-back">arrow_back_ios</span>
-        <div class="container large">
-
-            <div class="stage">
-                <div class="slides"><img src="media/PH179545-crop001.jpg" alt="1"></div>
-                <div class="slides"><img src="media/PH179744-crop001.jpg" alt="2"></div>
-                <div class="slides"><img src="media/PH179570-crop001.jpg" alt="3"></div>
-                <div class="slides"><img src="media/PH179572-crop001.jpg" alt="4"></div>
-                <div class="slides"><img src="media/PH179742-crop001.jpg" alt="5"></div>
-                <div class="slides"><img src="media/PH179546-crop001.jpg" alt="6"></div>
+    </header>   
+    <div class="splash-screen">
+        <video id="video-background" autoplay muted loop>
+            <source src="media/splash_screen.mp4" type="video/mp4">
+            <!-- Include additional video formats for better browser compatibility -->
+            <!-- <source src="path/to/video.webm" type="video/webm"> -->
+            <!-- <source src="path/to/video.ogv" type="video/ogv"> -->
+            Your browser does not support the video tag.
+          </video>
+        <div class="loader-container">
+            <div class="text">
+            <h1 id="website-name">THE COOKBOOK</h1>
+            <br><br>
+            <h3 class="creators">
+                Created by<br>
+                Heshan Wanigasinghe<br>
+                Venura Pesanjith<br>
+                Ayyoob Ajward<br>
+                Kaveesha
+            </h3>
+            </div>
+            <div class="loader"></div>
+        </div>
+    </div>
+    <div id="main-content" style="display:none">
+         <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        <div class="slideshow">
+            <span class="material-symbols-outlined arrow-back">arrow_back_ios</span>
+            <div class="container large">
+    
+                <div class="stage">
+                    <div class="slides"><img src="media/PH179545-crop001.jpg" alt="1"></div>
+                    <div class="slides"><img src="media/PH179744-crop001.jpg" alt="2"></div>
+                    <div class="slides"><img src="media/PH179570-crop001.jpg" alt="3"></div>
+                    <div class="slides"><img src="media/PH179572-crop001.jpg" alt="4"></div>
+                    <div class="slides"><img src="media/PH179742-crop001.jpg" alt="5"></div>
+                    <div class="slides"><img src="media/PH179546-crop001.jpg" alt="6"></div>
+                </div>
+            </div>
+            <span class="material-symbols-outlined arrow-front">arrow_forward_ios</span>
+        </div>
+        <div class="container normal">
+            <div class="normal-post1">
+                <img src="media/posts1.webp" alt="">
+                <p>Introducing our showstopper: Homemade Thick Noodles! These delectable noodles are crafted with care using boiled yukon gold potatoes, potato starch, and corn starch for an irresistible chewy texture.</p>
+            </div>
+            <div class="normal-post2">
+                <p>"Slice, Dice, and Airfry to Perfection! Unlock Culinary Magic with our Airfryer Extraordinaire. This powerful gadget combines the precision of a knife and the sizzle of hot air to create mouthwatering wonders. </p>
+                <img src="media/post2.webp" alt="">
             </div>
         </div>
-        <span class="material-symbols-outlined arrow-front">arrow_forward_ios</span>
+    <footer>
+        <div class="footer-container">
+            <img src="media/header.png" alt="" height="90">
+            <div class="details">
+                <h2>The CookBook</h2>
+                <p>9 3/4,</p>
+                <p>Privet Drive</p>
+                <p>Colombo 07</p>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com"><img src="media/icons/facebook.png" alt=""></a>
+                <a href="https://web.whatsapp.com"><img src="media/icons/whatsapp.png" alt=""></a>
+                <a href="https://www.instagram.com"><img src="media/icons/instagram.png" alt=""></a>
+                
+            </div>
+        </div>
+    </footer>
     </div>
-    <div class="container normal">
-        <div class="normal-post1">
-            <img src="media/posts1.webp" alt="">
-            <p>Introducing our showstopper: Homemade Thick Noodles! These delectable noodles are crafted with care using boiled yukon gold potatoes, potato starch, and corn starch for an irresistible chewy texture.</p>
-        </div>
-        <div class="normal-post2">
-            <p>"Slice, Dice, and Airfry to Perfection! Unlock Culinary Magic with our Airfryer Extraordinaire. This powerful gadget combines the precision of a knife and the sizzle of hot air to create mouthwatering wonders. </p>
-            <img src="media/post2.webp" alt="">
-        </div>
-    </div>
-<footer>
-    <div class="footer-container">
-        <img src="media/header.png" alt="" height="90">
-        <div class="details">
-            <h2>The CookBook</h2>
-            <p>9 3/4,</p>
-            <p>Privet Drive</p>
-            <p>Colombo 07</p>
-        </div>
-        <div class="icons">
-            <a href="https://www.facebook.com"><img src="media/icons/facebook.png" alt=""></a>
-            <a href="https://web.whatsapp.com"><img src="media/icons/whatsapp.png" alt=""></a>
-            <a href="https://www.instagram.com"><img src="media/icons/instagram.png" alt=""></a>
-            
-        </div>
-    </div>
-
-</footer>
 <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,14 @@
+setTimeout(function () {
+  document.getElementById("main-content").style.display = "block";
+  document.getElementsByClassName("splash-screen")[0].style.display =
+    "none";
+    document.getElementById("links").style.display="flex";
+}, 4000);
+
 document.addEventListener("DOMContentLoaded", function() {
     switchSlides(1,".slides");
     setInterval(()=>{switchSlides(1,".slides")},4000);
+
 
   });
 
