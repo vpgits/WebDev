@@ -1,12 +1,30 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Lora", serif;
+  /* font-family: "Lora", serif; */
 }
-
+#video-background {
+  position: fixed;
+  object-fit:cover;
+  objec
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity:1;
+}
+h3{
+  color:white;
+  font-size:30px;
+  font-weight:600;
+}
 /* Center the splash screen and loading animation */
 .splash-screen {
-  background-color: #80b918;
+
+  /* background-color: #80b918; */
+/* background-color:black;
+opacity:0.95; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +37,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  z-index: 1;
   /* margin-top: auto; */
 }
 
@@ -42,14 +61,15 @@
 
 /* Text */
 .text #website-name {
-  color: #5e5e5e;
+  color: white;
   font-size: 100px;
   font-weight: bold;
 }
 
 .text #creators {
-  color: #5e5e5e;
-  font-size: 30px;
+  color: white; //5e5e5e
+  font-size: 200px;
+  font-weight:600;
 }
 
 @keyframes rotate {
