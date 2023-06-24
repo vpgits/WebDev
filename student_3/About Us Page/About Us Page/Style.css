@@ -1,0 +1,163 @@
+:root{
+    --primary_color: #ff2400;
+    --secondary_color: #7028ff;
+    --background_color:#fcfcfc;
+    --White_color: white;
+    --Black_color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    color:var(--Black_color);
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+
+}
+
+html{
+    scroll-behavior:initial;
+}
+
+body{
+    background-color:#ffffff;
+}
+
+.Hero {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background-image:linear-gradient(to bottom ,#0a090b73,#111111fb),url(gourmet-chicken-biryani-with-steamed-basmati-rice-generated-by-ai.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.Hero h1 {
+    font-size: 4rem;
+    color: var(--White_color);
+}
+
+p {
+    font-size: 1.2rem;
+    color: var(--White_color);
+}
+
+.about {
+    padding:0px 250px ;
+}
+
+.Hero img {
+    margin: 0px 100px;
+    position: relative;
+    left: -100px;
+}
+
+/* profile section */
+
+.profiles {
+    width: 100%;
+    height: 100vh;
+    background-color:var(--secondary_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.cards{
+    width: 350px;
+    height: 500px;
+    background-color: #fcfcfc;
+    margin: 0px 20px;
+    border-radius: 50px;
+    border-radius: 20px;
+}
+
+.pic {
+
+    position: relative;
+    top:-100px;
+    right: -25px;
+
+    width: auto;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.pic:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease 0s;
+
+}
+
+.cards:hover {
+    background-color: var(--Black_color);
+}
+
+.cards:hover, .cards:hover .pic{
+    transform: scale(1.05);
+    transition: all 0.35s ease 0s;
+}
+
+.cards h3, .cards p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.cards:hover h3{
+    color: var(--background_color);
+
+}
+
+.cards p{
+    color: var(--secondary_color);
+}
+
+/* clients section  */
+
+.clientsection{   
+    background-color:#e4e4e4;
+    width: 100%;
+    height: 50vh;
+  
+}
+.clientsection h1{
+    font-size: 3rem;
+    padding: 80px;
+    color: rgb(33, 33, 33);
+}
+
+.clientsection .clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients .card{
+    padding: 20px 200px;
+
+}
+
+.clients .card img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease 0s;
+}
