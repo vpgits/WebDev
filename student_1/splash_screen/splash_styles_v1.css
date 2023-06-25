@@ -1,0 +1,77 @@
+/* Student Role: student_1
+   Student Name: Heshan Wanigasinghe */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lora", serif;
+}
+
+#video-background {
+  position: fixed;
+  object-fit:cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity:1;
+}
+
+/* Center the splash screen and loading animation */
+.splash-screen {
+  background-color: #80b918;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  /* margin-top: auto; */
+}
+
+/* image sizing for mages inside loader-container class */
+.loader-container img {
+  width: 200px;
+  height: 200px;
+}
+
+/* Loading animation */
+.loader {
+  margin-top: 170px;
+  width: 100px;
+  height: 100px;
+  border: 8px solid white;
+  border-top: 8px solid #5e5e5e;
+  border-bottom: 8px solid #5e5e5e;
+  border-radius: 50%;
+  animation: rotate 2s linear infinite;
+  margin-bottom: 30px;
+}
+
+/* Text */
+.text #website-name {
+  color: #5e5e5e;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.text #creators {
+  color: #5e5e5e;
+  font-size: 30px;
+}
+
+/* rotate animation declaration */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

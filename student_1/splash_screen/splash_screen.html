@@ -1,46 +1,43 @@
+<!--Student Role: student_1-->
+<!--Student Name: Heshan Wanigasinghe-->
+
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="splash_styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="splash_styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
       rel="stylesheet"
-   >
+    />
   </head>
   <body>
     <div class="splash-screen">
+      <video id="video-background" autoplay muted loop>
+        <source src="/student_1/student_1_media/splash_screen.mp4" type="video/mp4" />
+      </video>
       <div class="loader-container">
-        <img src="/media/header.png" alt="logo">
         <div class="text">
           <h1 id="website-name">THE COOKBOOK</h1>
-          <br><br>
-          <h3 id="creators">
-            Created by<br>
-            Heshan Wanigasinghe<br>
-            Venura Pesanjith<br>
-            Ayyoob Ajward<br>
-            Kaveesha
+          <br /><br />
+          <h3 class="creators">
+            Created by<br />
+            Heshan Wanigasinghe<br />
+            Venura Pesanjith<br />
+            Ayyoob Ajward<br />
+            Kaveesha Jayasingha
           </h3>
         </div>
         <div class="loader"></div>
       </div>
     </div>
-
-    <div id="main-content" style="display: none">
-      <!-- main page content (for reference) -->
-      <h1>Welcome to My Website!</h1>
-      <p>Home-page</p>
-    </div>
-
     <script>
-     // Show main content after 4 seconds
+      // redirect to homepage(index.html) after 4 seconds
       setTimeout(function () {
-        document.getElementById("main-content").style.display = "block";
         document.getElementsByClassName("splash-screen")[0].style.display =
           "none";
-          
+        window.location.replace("/index.html");
       }, 4000);
     </script>
   </body>
