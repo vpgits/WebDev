@@ -111,6 +111,7 @@ p {
 
 .cards:hover {
     background-color: var(--Black_color);
+    cursor:pointer;
 }
 
 .cards:hover, .cards:hover .pic{

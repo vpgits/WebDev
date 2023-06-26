@@ -9,12 +9,98 @@
     <link rel="stylesheet" href="payment_page.css">
 </head>
 <body>
-    <header>
-        <div class="header-container" id="navbar">
-            <div class="header-icon">
-                <img id="headerImg" src="../media/header.png" alt="icon">   
+    <header> 
+    <div class="header-container" id="navbar">
+        <div class="header-icon">
+            <img id="headerImg" src="../media/header.png" alt="icon">   
+            <a  ><span class="material-symbols-outlined" id="hamburgMenu">menu</span></a> 
+        </div>
+        <div class="header-links" id="links" >
+            <a href="index.html" class="current">Home</a>
+            <a href="studentOne.html">StudentOne</a>
+            <a href="studentTwo.html">StudentTwo</a>
+            <a href="studentThree.html">StudentThree</a>
+            <a href="studentFour.html">StudentFour</a>
+            <a href="aboutus.html">AboutUs</a>
+        </div>
+    </div>
+</header>    
+    <main>
+    <form id="user-details" class="active" action="javascript:switchFormsOne()" onsubmit="return validateFormOne()">
+        <div class="container">
+            <h6>Shipping Details</h6>
+            <div class="mini-container" id="fname-container">
+                <input type="text" name="fname" id="fname" placeholder="Fullt Name" oninput="return validateName('fname','fname-container')" required>
             </div>
-    </header>
-    <main></main>
+        
+            <div class="mini-container">
+                <input type="text" id="houseNo" placeholder="House Number" required>
+            </div>
+            <div class="mini-container">
+                <input type="text" id="street" placeholder="Street Name" required>
+            </div>
+            <div class="mini-container">
+                <input type="text" id="City" placeholder="City" required>
+            </div>
+            <div class="mini-container">
+                <input type="number" id="zip" placeholder="Zip" min="01000" max="99999" required>
+            </div>
+            <div class="mini-container telephone">
+                <input type="text" name="telephone" id="telephone" placeholder="012-3456789"  oninput=" return validateNumber()" required>
+            </div>     
+            <div class=" mini-container btns" >
+                <input type="submit" value="Submit" id="submit" >
+                <input type="reset" value="Reset" id="reset">
+            </div>
+        </div>
+    </form>
+        <form id ="payment-details" class="active">
+        <div class="container">
+            <div class="mini-container" id="cardname-container">
+                <input type="text" id="name"  placeholder="Cardholder Name" oninput="return validateName('name','cardname-container')">
+            </div>
+            <div class="mini-container">
+                <input type="email" name="emal" id="email" placeholder="Email Address" oninput="return validateEmail()">
+            </div>
+            <div class="mini-container" >
+                <input type="number" id="cardNumber" placeholder="Card Number" oninput="return validateCreditCardNum()">
+            </div>
+            <div class="mini-container">
+                <input type="text" id="expiry-date" placeholder="Expiry Date(MM/YY)" oninput="return validateExpiryDate()">
+            </div>
+            <div class="mini-container">
+                <input type="number" id="csv" placeholder="CSV(XXX)" min="0" max="999" length="3">
+            </div>
+            <div class="btns" >
+                <input type="submit" value="Submit" id="submit" >
+                <input type="reset" value="Reset" id="reset">
+            </div>
+            
+            
+        </div>
+    </form>
+    <div class="receipt inactive" >
+        
+    </div>
+    <a href="#top" ><img src="/media/icons/icons8-scroll-up-100.png" alt="" id="toTop">Scroll Up</a> 
+</main>
+<footer>
+    <div class="footer-container">
+        <img src="../media/header.png" alt="" height="90">
+        <div class="details">
+            <h2>The CookBook</h2>
+            <p>9 3/4,</p>
+            <p>Privet Drive</p>
+            <p>Colombo 07</p>
+        </div>
+        <div class="icons">
+            <a href="https://www.facebook.com"><img src="../media/icons/facebook.png" alt=""></a>
+            <a href="https://web.whatsapp.com"><img src="../media/icons/whatsapp.png" alt=""></a>
+            <a href="https://www.instagram.com"><img src="../media/icons/instagram.png" alt=""></a>
+        </div>
+    </div>
+</footer>
+<script src="payment_page.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>

@@ -24,13 +24,13 @@
    >
 </head>
 <body>
-    <header> 
+    <header id="#top"> 
         <div class="header-container" id="navbar">
             <div class="header-icon">
                 <img id="headerImg" src="media/header.png" alt="icon">   
                 <a  ><span class="material-symbols-outlined" id="hamburgMenu">menu</span></a> 
             </div>
-            <div class="header-links" id="links" style="display: none;">
+            <div class="header-links" id="links" style="display: flex">
                 <a href="index.html" class="current">Home</a>
                 <a href="studentOne.html">StudentOne</a>
                 <a href="studentTwo.html">StudentTwo</a>
@@ -40,30 +40,8 @@
             </div>
         </div>
     </header>   
-    <div class="splash-screen">
-        <video id="video-background" autoplay muted loop>
-            <source src="media/splash_screen.mp4" type="video/mp4">
-            <!-- Include additional video formats for better browser compatibility -->
-            <!-- <source src="path/to/video.webm" type="video/webm"> -->
-            <!-- <source src="path/to/video.ogv" type="video/ogv"> -->
-            Your browser does not support the video tag.
-          </video>
-        <div class="loader-container">
-            <div class="text">
-            <h1 id="website-name">THE COOKBOOK</h1>
-            <br><br>
-            <h3 class="creators">
-                Created by<br>
-                Heshan Wanigasinghe<br>
-                Venura Pesanjith<br>
-                Ayyoob Ajward<br>
-                Kaveesha
-            </h3>
-            </div>
-            <div class="loader"></div>
-        </div>
     </div>
-    <div id="main-content" style="display:none">
+    <div id="main-content" style="display:block">
          <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
         <div class="slideshow">
             <span class="material-symbols-outlined arrow-back">arrow_back_ios</span>
@@ -90,6 +68,7 @@
                 <img src="media/post2.webp" alt="">
             </div>
         </div>
+        <a href="#top" ><img src="/media/icons/icons8-scroll-up-100.png" alt="" id="toTop">Scroll Up</a> 
     <footer>
         <div class="footer-container">
             <img src="media/header.png" alt="" height="90">
@@ -109,5 +88,6 @@
     </footer>
     </div>
 <script src="script.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
