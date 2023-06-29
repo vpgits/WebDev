@@ -12,6 +12,8 @@
     box-sizing: border-box;   
     font-family: 'poppins',sans-serif;
     color:var(--Black_color);
+    letter-spacing: 0.5px;
+    word-spacing: 1.75px;
 }
 
 body{
@@ -23,11 +25,13 @@ body{
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 0px 50px;
+
+   padding: 0px 150px;
    width: 100%;
-   height: 90px;
+   height: 115px;
+
    background-color: var(--Black_color);
-   box-shadow: 1px 1px 5px #3333338b;
+   box-shadow: 2px 2px 5px #3333338b;
       
 }
 
@@ -35,6 +39,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
     
 }
 
@@ -55,6 +61,7 @@ body{
 
 .logo{
     filter: contrast(120%);
+    cursor: pointer;
 }
 
 main {
@@ -62,22 +69,94 @@ main {
     justify-content: center;
     align-items:center;
 
-    background-image:url(Quiz\ Background.png);
+    background-image:url(bg.png);
     background-repeat: no-repeat;
     background-position: top;
     background-size:cover;
     background-color: hsla(300, 100%, 25%, 0.752);
 
+    backdrop-filter: blur(15px);
+
 }
 
 .box {
     margin-top: 100px;
+    padding: 0px 100px;
     width: 70%;
-    height: 78vh;
+    height: 90vh;
     background-color:var(--background_color);
-    border-radius: 30px 30px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
+
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: start;
+    flex-wrap: wrap;
 }
 
+
+.quizicon{
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: -110px;
+
+    margin-bottom:-100px ;
+    
+}
+
+.quizcount {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -45px;
+    font-weight: 700;
+
+}
+
+.quesion h1{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 0px 200px;
+    text-align: center;
+    color: #7d18a8;
+}
+
+.answres{
+    font-size: 1rem;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    margin: 30px 50px;
+}
+
+
+.answres div div{
+    margin: 20px;
+}
+
+button{
+    border:4px solid #d1d1d1;
+    width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    color:  #080311;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: start;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:#ffffff;
+    border: 4px solid #7d18a8;
+    color: #7d18a8;
+    transform:scale(1.005);
+    transition: all 0.3s ease 0s;
+}
