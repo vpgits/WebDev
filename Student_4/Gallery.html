@@ -4,15 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
+    <link rel="stylesheet" href="Gallery.css">
+    <link rel="stylesheet" href="imageSlider.css">
 </head>
 <body>
-    <div class="action">
-        <span>+</span>
-        <ul>
-            <li>Dark Mode</li>
-            <li>Random Colour</li>
-            <li></li>
-        </ul>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+           
+
+            <div class="slide first">
+                <img src="img/brooke-lark-W9OKrxBqiZA-unsplash.jpg" alt="" style="height:600px; width:1250px;">
+            </div>
+            <div class="slide">
+                <img src="img/brooke-lark-nBtmglfY0HU-unsplash.jpg" alt="" style="height:600px; width:1250px;">
+            </div>
+            <div class="slide">
+                <img src="img/brooke-lark-aGjP08-HbYY-unsplash.jpg" alt="" style="height:600px; width:1250px;">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+
+      
+    <div class="contain">
+           <i> +</i>
+    </div>
+    <div class="boxs">    
+            <button  class="item item1" onclick="color(this.value)" value="#9DC08B">Our Theame</button>
+            <button  class="item item2" onclick="color(this.value)" value="#121212">Dark mode</button>
+            <button  class="item item3" onclick="color(this.value)" value="#EDF1D6">Green</button>
+            <button  class="item item4" onclick="color(this.value)" value="#FFFFFF">Light mode</button>
+            <button  class="item item5" onclick="getNewColor()">Random colour</button>
+    </div>
     
+    
+
+    
+    <h2>OUR PRODUCT</h2>
+   
+    <div class="container">
+        <di class="box">
+        <div class="main">
+            <img  src="img/jason-briscoe-PkkLkjJdUZw-unsplash.jpg" >
+            <img src="img/janko-ferlic-KwU5Cl0LSXs-unsplash.jpg">
+            <img src="img/danilo-rios-z9AormQ0e90-unsplash.jpg">
+            <img src="img/dane-deaner-wkC8EX8y9Mc-unsplash.jpg">
+           
+
+        </div>
+        <div class="main">
+            <img src="img/marcin-galusz-Xq0lte4P7rQ-unsplash.jpg">
+            <img src="img/calum-lewis-rkT_TG5NKF8-unsplash.jpg">
+            
+            <img src="img/jan-antonin-kolar-bEcg2Wmi7wI-unsplash.jpg">
+            
+        </div>
+        <div class="main">
+            <img src="img/icons8-team-seDjj4dmC9s-unsplash.jpg">
+            <img src="img/nathan-dumlao-3Tm2oJp6AQY-unsplash.jpg">
+            <img src="img/vladimir-gladkov-d1hKXgFJUKw-unsplash.jpg">
+            <img src="img/todd-quackenbush-x5SRhkFajrA-unsplash (1).jpg">
+           
+        </div>
+        </di>
+    </div>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+        document.getElementById('radio' + counter).checked=true;
+        counter++;
+        if(counter>3){
+           counter = 1;
+        }
+        },5000);
+    </script>
+
+   
+    <script src="Gallery.js"></script>
+
 </body>
 </html>
