@@ -1,0 +1,121 @@
+*{
+    -webkit-appearance: none;
+    border:none;
+}
+
+p{
+    font-size:12px;
+}
+
+body{
+    margin-top:150px;
+    background-color:#EDF1D6;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-details{
+    margin-top:75px;
+    flex-wrap:wrap;
+    flex-direction:column;
+    justify-content:center;
+    font-size:30px;
+
+}
+
+.btns *{
+    padding:10px;
+    align-items:center;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    width:330px;
+    /* width:500px; */
+    /* justify-content:center; */
+    background-color:#9DC08B; 
+    padding:10px;
+    margin:10px;
+    border-radius:15px;
+}
+
+.active{
+    display:flex;
+
+}
+.inactive{
+    display:none;
+    pointer-events:none;
+      
+}
+
+input[type=text], input[type=number], input[type=email], input[type=date] {
+    padding:10px;
+    margin:10px;
+    width:60%;
+    border-radius:10px;
+    background-color:#F7FFE5;
+}
+
+.btns > input{
+    padding:10px;
+    border-radius:20px;
+    width:40%;
+    font-size:18px;
+    font-weight:700;
+    color:white;
+}
+
+.btns > input:hover{
+    background-color:black;
+    cursor:pointer;
+}
+
+
+#year{
+    width:90px;
+    padding:10px;
+    margin:10px;
+    border-radius:10px;
+    background-color:#F7FFE5;
+    text-align:center;
+    color:#808080;
+    
+    }
+#month{
+    width:90px;
+    padding:10px;
+    margin:10px;
+    border-radius:10px;
+    background-color:#F7FFE5;
+    text-align:center;
+    color:#808080;
+}
+
+#submit{
+    background-color:green;
+}
+
+#reset{
+    background-color:red;
+}
+
+.warning {
+    color:red;
+}
+
+input:focus, select:focus{
+    /* border:none; */
+    outline:none;
+    border-color: #007bff;
+}
+
+footer{
+    position:relative;
+    width:100%;
+}
+

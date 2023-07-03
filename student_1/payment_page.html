@@ -34,7 +34,7 @@
             </div>
         
             <div class="mini-container">
-                <input type="text" id="houseNo" placeholder="House Number" required>
+                <input type="text" id="houseNo" placeholder="House Number" oninput="return validateHouseNumber()" required>
             </div>
             <div class="mini-container">
                 <input type="text" id="street" placeholder="Street Name" required>
@@ -48,7 +48,7 @@
             <div class="mini-container telephone">
                 <input type="text" name="telephone" id="telephone" placeholder="012-3456789"  oninput=" return validateNumber()" required>
             </div>     
-            <div class=" mini-container btns" >
+            <div class="btns formOne" >
                 <input type="submit" value="Submit" id="submit" >
                 <input type="reset" value="Reset" id="reset">
             </div>
@@ -63,10 +63,33 @@
                 <input type="email" name="emal" id="email" placeholder="Email Address" oninput="return validateEmail()">
             </div>
             <div class="mini-container" >
-                <input type="number" id="cardNumber" placeholder="Card Number" oninput="return validateCreditCardNum()">
+                <input type="text" id="cardNumber" placeholder="Card Number" oninput="return validateCreditCardNum()">
             </div>
-            <div class="mini-container">
-                <input type="text" id="expiry-date" placeholder="Expiry Date(MM/YY)" oninput="return validateExpiryDate()">
+            <div class="mini-container" id="yearmonth">
+                <select name="month" id="month" required>
+                    <option value="0">Month</option>
+                    <option value="1">Janurary</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select name="Year" id="year" required>
+                    <option value="0">Year</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                </select>
             </div>
             <div class="mini-container">
                 <input type="number" id="csv" placeholder="CSV(XXX)" min="0" max="999" length="3">
