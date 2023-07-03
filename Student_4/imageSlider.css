@@ -27,7 +27,7 @@
     justify-content: center;
 }
 .manual-btn{
-   border:2px solid black;
+   border:2px solid #40513B;
    padding:5px;
    border-radius:10px;
    cursor: pointer;
@@ -38,7 +38,7 @@
 }
 
 .manual-btn:hover{
-    background: black;
+    background: #40513B;
 }
 
 #radio1:checked ~ .first{
@@ -59,7 +59,7 @@
     margin-top:500px;
 }
 .navigation-auto div{
-    border:2px solid black;
+    border:2px solid #40513B;
     padding:5px;
     border-radius:10px;
     transition:1s;
@@ -68,11 +68,17 @@
     margin-right:40px;
 }
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background: black;
+    background: #40513B;
 }
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background: black;
+    background: #40513B;
 }
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background: black;
+    background: #40513B;
+}
+
+.slider .slides .slide .info{
+    position:absolute;
+    top:0;
+    padding: 100px 30px;
 }
