@@ -1,0 +1,131 @@
+<!--Student Role: student_1-->
+<!--Student Name: Heshan Wanigasinghe-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products page</title>
+    <meta name="description" content="This is the description" />
+    <link rel="stylesheet" href="products_page.css" />
+  </head>
+  <body>
+
+    <div id="scroll-to-top">
+      <a id="top"></a>
+      <a href="#top" class="scroll-to-top">&#9650;</a>
+    </div>
+
+    <h1 class="heading">The CookShop</h1>
+    <div class="container content-section">
+      <h2 class="container-header">Cooking Essentials</h2>
+      
+      <div class="shop-items">
+
+        <div class="shop-item">
+          <span class="shop-item-name">Chopping Board</span>
+            <img class="shop-item-image"
+              src="/student_1/student_1_media/chopping_board.png"
+            />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$7.00</span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="shop-item">
+          <span class="shop-item-name">Food Container</span>
+            <img class="shop-item-image"
+              src="/student_1/student_1_media/food_container.png"
+            />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$4.00</span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="shop-item">
+          <span class="shop-item-name">Kitchen Scale</span>
+            <img class="shop-item-image"
+            src="/student_1/student_1_media/kitchen_scale.png"
+          />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$15.00</span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="shop-item">
+          <span class="shop-item-name">Kitchen Knife</span>
+            <img class="shop-item-image"
+            src="/student_1/student_1_media/knife.png"
+          />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$12.00</span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="shop-item">
+          <span class="shop-item-name">Spatula</span>
+            <img class="shop-item-image"
+            src="/student_1/student_1_media/spatula.png"
+          />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$3.00</span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+        <div class="shop-item">
+          <span class="shop-item-name">Spice Rack</span>
+            <img class="shop-item-image"
+            src="/student_1/student_1_media/spice_rack.png"
+          />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$10.00</span>
+            <button class="btn btn-primary shop-item-button" type="button">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  <div id="shopping-cart">
+    <div class="container content-section"><br><br>
+      <h2 class="container-header">SHOPPING CART</h2>
+      <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">UNIT PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-total">
+        <strong class="cart-total-title">Total</strong>
+        <span class="cart-total-price">$0</span>
+      </div>
+      <button class="btn btn-primary btn-ProceedToCheckout" type="button">
+        Proceed To Checkout
+      </button>
+    </div>
+  </div>
+
+    <div id="scroll-to-shopping-cart">
+      <a href="#shopping-cart" class="scroll-to-shopping-cart"><img src="/student_1/student_1_media/shopping_cart.png" alt=""></a>
+  </div>
+
+    <script src="products_page.js"></script>
+  </body>
+</html>
