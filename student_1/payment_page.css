@@ -8,7 +8,7 @@ p{
 }
 
 body{
-    margin-top:150px;
+    margin-top:60px;
     background-color:#EDF1D6;
     display: flex;
     flex-direction:column;
@@ -21,7 +21,6 @@ body{
     flex-wrap:wrap;
     flex-direction:column;
     justify-content:center;
-    font-size:30px;
 
 }
 

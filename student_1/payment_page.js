@@ -25,13 +25,12 @@ function validateName(inputelement, parentelement){
                    
                 }else {
                     validName = true;
+                    console.log(validName);
                     parentElement.removeChild(warning);
             } 
         }
         }
     })
-    console.log(validName);
-    return validName;
 }
 
 let validTele;
@@ -74,11 +73,12 @@ function validateEmail(){
         if(!regex.test(email.value)){
             warningText.textContent  = "Enter a valid email";
         } else{
+            validEmail=true;
             parentElement.removeChild(warning);
         }
     }
 }
-
+let validCard;
 function validateCreditCardNum(){
     const num = document.getElementById("cardNumber");
     const warningText  =document.querySelector(".warning.number");
@@ -94,14 +94,16 @@ function validateCreditCardNum(){
         if (regex.test(num.value)){
             if (num.value.length!=19){
                 warningText.textContent = "A valid card number must have 16 digits";
-            }else {
+            }else if (num.value.length === 19) {
                 parentElement.removeChild(warning);
+                validCard=true;
             }
         } else {
             warningText.textContent = "Enter digits";
             // parentElement.appendChild(warningText);
         }
     }
+    console.log(validCard)
 }
 
 function validateExpiryDate(){
@@ -127,6 +129,7 @@ function validateExpiryDate(){
     }
 }
 
+let validHouseNumber;
 function validateHouseNumber(){
     let regex =/^(\d+)(\/\d*)?$/;
     const number = document.getElementById("houseNo");
@@ -140,33 +143,47 @@ function validateHouseNumber(){
             console.log('Im here');
             warning.textContent = "Enter a valid House number"
         } else {
+            validHouseNumber = true;
             parentElement.removeChild(warning);
         }
     }
-
+return validHouseNumber;
 }
 
 
 
 function validateFormOne(){
-    return validateName() && validateNumber();
+    let output = validName && validateNumber() && validateHouseNumber();
+    return output;
+
     // return false;
 }
 
 function validateFormTwo(){
-    return validateName() 
+
+    return validCard && validName && validEmail;
 }
 
 function switchFormsOne(){
     //toggle visibility of the form
     // document.getElementById("user-details").classList.remove("active");
     // document.getElementById("user-details").classList.add("inactive");
-    document.getElementById("payment-details").classList.remove("inactive");
-    document.getElementById("payment-details").classList.add("active");
-    document.querySelector("footer").style.position = "relative";
-    document.getElementById("user-details").style.marginTop = 0;
+    // document.getElementById("payment-details").classList.remove("inactive");
+    // document.getElementById("payment-details").classList.add("active");
+    // document.querySelector("footer").style.position = "relative";
+    // document.getElementById("user-details").style.marginTop = 0;
     document.querySelectorAll(".btns.formOne").forEach((element) =>{
         element.style.display = "none";
     })
-      
+    const formElements = document.getElementById("user-details").getElementsByTagName('input');
+    for (let i = 0; i < formElements.length; i++) {
+        console.log(formElements[i].innerHTML);
+        formElements[i].disabled = true;
+    }
+}
+
+function switchFormsTwo(){
+    if (validCard && validName && validEmail){
+        window.location.replace('/student_2/comments.html');
+    }
 }

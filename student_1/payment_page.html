@@ -28,9 +28,9 @@
     <main>
     <form id="user-details" class="active" action="javascript:switchFormsOne()" onsubmit="return validateFormOne()">
         <div class="container">
-            <h6>Shipping Details</h6>
+            <h3>Shipping Details</h3>
             <div class="mini-container" id="fname-container">
-                <input type="text" name="fname" id="fname" placeholder="Fullt Name" oninput="return validateName('fname','fname-container')" required>
+                <input type="text" name="fname" id="fname" placeholder="Full Name" oninput="return validateName('fname','fname-container')" required>
             </div>
         
             <div class="mini-container">
@@ -54,13 +54,14 @@
             </div>
         </div>
     </form>
-        <form id ="payment-details" class="active">
+        <form id ="payment-details" class="active" action="javascript:switchFormsTwo()" onsubmit=" return validateFormTwo()">
         <div class="container">
+            <h3>Payment Details</h3>
             <div class="mini-container" id="cardname-container">
-                <input type="text" id="name"  placeholder="Cardholder Name" oninput="return validateName('name','cardname-container')">
+                <input type="text" id="name"  placeholder="Cardholder Name" oninput="return validateName('name','cardname-container')" required>
             </div>
             <div class="mini-container">
-                <input type="email" name="emal" id="email" placeholder="Email Address" oninput="return validateEmail()">
+                <input type="email" name="emal" id="email" placeholder="Email Address" oninput="return validateEmail()" required>
             </div>
             <div class="mini-container" >
                 <input type="text" id="cardNumber" placeholder="Card Number" oninput="return validateCreditCardNum()">
@@ -92,7 +93,7 @@
                 </select>
             </div>
             <div class="mini-container">
-                <input type="number" id="csv" placeholder="CSV(XXX)" min="0" max="999" length="3">
+                <input type="number" id="csv" placeholder="CSV(XXX)" min="0" max="999" length="3" requried>
             </div>
             <div class="btns" >
                 <input type="submit" value="Submit" id="submit" >
