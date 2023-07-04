@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   proceedToCheckoutButton.addEventListener('click', purchaseClicked);
 });
 
-let shoppingCartCard;
-
 function purchaseClicked() {
   // alert('Thank you for your purchase');
   const cartItems = document.querySelector('.cart-items');
