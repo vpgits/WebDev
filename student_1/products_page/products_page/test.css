@@ -1,0 +1,153 @@
+/* Student Role: student_1
+   Student Name: Heshan Wanigasinghe */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lora', serif;
+    background-color: #40513b;
+    color: #EDF1D6;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  #page-heading {
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 60px;
+  }
+  
+  .container-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .product {
+    background-color: #609966;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .product .image {
+    background-color: #EDF1D6;
+    height: 370px;
+  }
+  
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product img:hover {
+    transform: scale(0.9);
+  }
+  
+  .product-info h3 {
+    margin-top: 15px;
+    font-size: 30px;
+  }
+  
+  .product-info p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+  }
+  
+  .add-to-cart-button button {
+    background-color: #40513b;
+    color: #EDF1D6;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-to-cart-button button:hover {
+    transform: scale(0.95);
+  }
+  
+  .shopping-cart {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    margin: 0 auto;
+    width:85%;
+    margin-top: 100px;
+    text-align: center;
+    height: fit-content;
+    border: solid 7px #EDF1D6;
+  }
+  
+  .shopping-cart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  #shopping-cart-icon img {
+    width: 60px;
+  }
+  
+  /* .shopping-cart .shopping-cart-headings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  } */
+  
+  
+  #scroll-to-top button{
+    padding: 20px;
+    position:fixed;
+    top: 90%;
+    right: 50px;
+  }
+  
+  .scroll-to-top {
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-size: 24px;
+    color: #EDF1D6;
+    background-color: #40513b;
+    padding: 15px;
+    margin: 10px;
+    border: solid #609966;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+  
+  .scroll-to-shopping-cart{
+    height: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    color: #EDF1D6;
+    background-color: #40513b;
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .scroll-to-shopping-cart img{
+    height: 50px;
+  }
