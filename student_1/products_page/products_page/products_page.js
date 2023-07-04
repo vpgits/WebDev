@@ -49,7 +49,7 @@ function purchaseClicked() {
     cartItems.removeChild(cartItems.firstChild);
 >>>>>>> 63c8349a93a0d016eccf955271c1948403aedab3
   }
-  window.location.replace("/student_1/payment_page/payment_page.html");
+  window.location.replace =('/products_page/payment_page.html');
   updateCartTotal();
 }
 
