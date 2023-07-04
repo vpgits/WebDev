@@ -39,8 +39,11 @@ function ready() {
   document.getElementsByClassName('btn-ProceedToCheckout')[0].addEventListener('click', purchaseClicked)
 }
 
+let shoppingCartCard;
+
 function purchaseClicked() {
-  alert('Thank you for your purchase')
+  shoppingCartCard  = document.getElementById("shopping-cart").innerHTML;
+  window.location.replace("/student_1/payment_page.html")
   var cartItems = document.getElementsByClassName('cart-items')[0]
   while (cartItems.hasChildNodes()) {
       cartItems.removeChild(cartItems.firstChild)
@@ -114,3 +117,5 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100
   document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
+
+export {shoppingCartCard};
