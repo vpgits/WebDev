@@ -39,7 +39,7 @@ function purchaseClicked() {
   while (cartItems.firstChild) {
     cartItems.removeChild(cartItems.firstChild);
   }
-  window.location.replace =('/products_page/payment_page.html');
+  window.location.replace("/student_1/payment_page/payment_page.html");
   updateCartTotal();
 }
 
