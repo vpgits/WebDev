@@ -36,20 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
 let shoppingCartCard;
 
 function purchaseClicked() {
-<<<<<<< HEAD
-  shoppingCartCard  = document.getElementById("shopping-cart").innerHTML;
-  window.location.replace("/student_1/payment_page.html")
-  var cartItems = document.getElementsByClassName('cart-items')[0]
-  while (cartItems.hasChildNodes()) {
-      cartItems.removeChild(cartItems.firstChild)
-=======
   // alert('Thank you for your purchase');
   const cartItems = document.querySelector('.cart-items');
   while (cartItems.firstChild) {
     cartItems.removeChild(cartItems.firstChild);
->>>>>>> 63c8349a93a0d016eccf955271c1948403aedab3
   }
-  window.location.replace =('/products_page/payment_page.html');
+  window.location.replace("/student_1/payment_page/payment_page.html");
   updateCartTotal();
 }
 
@@ -107,24 +99,6 @@ function addItemToCart(title, price, imageSrc) {
 }
 
 function updateCartTotal() {
-<<<<<<< HEAD
-  var cartItemContainer = document.getElementsByClassName('cart-items')[0]
-  var cartRows = cartItemContainer.getElementsByClassName('cart-row')
-  var total = 0
-  for (var i = 0; i < cartRows.length; i++) {
-      var cartRow = cartRows[i]
-      var priceElement = cartRow.getElementsByClassName('cart-price')[0]
-      var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-      var price = parseFloat(priceElement.innerText.replace('$', ''))
-      var quantity = quantityElement.value
-      total = total + (price * quantity)
-  }
-  total = Math.round(total * 100) / 100
-  document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
-}
-
-export {shoppingCartCard};
-=======
   const cartRows = document.querySelectorAll('.cart-row');
   let total = 0;
   cartRows.forEach(cartRow => {
@@ -251,4 +225,3 @@ export {shoppingCartCard};
 //   total = Math.round(total * 100) / 100
 //   document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 // }
->>>>>>> 63c8349a93a0d016eccf955271c1948403aedab3
