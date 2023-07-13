@@ -16,7 +16,11 @@ body {
 }
 
 .heading {
-  margin: 30px;
+  width:90vw;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:20px;
+  margin-bottom:20px;
   text-align: center;
   font-size: 6em;
   font-weight: normal;
@@ -304,6 +308,13 @@ body {
 
 .btn-ProceedToCheckout {
   display: block;
-  margin: 40px auto 80px auto;
+  margin: 40px auto 0 auto;
   font-size: 1.75em;
+}
+
+#shopping-cart{
+  width:90vw;
+  margin:20px auto;
+  padding:20px;
+  border-radius:20px;
 }

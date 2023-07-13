@@ -223,6 +223,8 @@ function updateCartTotal() {
 
 
 
+
+
 // standby js (do not change, make new commits or delete... thanks :) )
 
 // if (document.readyState == 'loading') {

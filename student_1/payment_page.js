@@ -2,6 +2,7 @@ let validName ;
 const warning = document.createElement('p') ;
 warning.classList.add("warning");
 
+
 function validateName(inputelement, parentelement){
     validName = false;
     let element = document.getElementById(inputelement);
