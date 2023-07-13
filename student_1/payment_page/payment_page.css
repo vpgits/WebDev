@@ -1,5 +1,5 @@
 * {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   border: none;
 }
 
@@ -17,12 +17,18 @@ body {
 }
 
 #user-details {
-  margin-top: 75px;
+  /* margin-top: 75px; */
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   font-size: 30px;
 }
+
+/* .  */
+#payment-details {
+  font-size: 30px;
+}
+/* .  */
 
 .btns * {
   padding: 10px;

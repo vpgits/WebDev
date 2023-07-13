@@ -141,7 +141,7 @@ function validateHouseNumber() {
     parentElement.appendChild(warning);
   } else {
     if (!regex.test(number.value)) {
-      console.log("Im here");
+      // console.log("Im here");
       warning.textContent = "Enter a valid House number";
     } else {
       validHouseNumber = true;
