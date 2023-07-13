@@ -1,3 +1,8 @@
+*{
+    margin:0;
+    padding:0;
+}
+
 form{
     color:black;
     font-weight:400;
@@ -9,8 +14,7 @@ label{
     /* color:white; */
 }
 datalist {
-    padding-right:30vw;
-    padding-left:30vw;
+    margin:0 auto;
     width:40vw;
     display: flex;
     /* flex-direction: column; */
@@ -34,6 +38,7 @@ datalist {
     margin:15px;
     border-radius:10px;
 }
+
 #rating::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -58,7 +63,6 @@ textarea{
 }
 
 select{
-    font-family: 'Titillium Web';
     font-weight:600;
 }
 
@@ -70,7 +74,6 @@ input[type=submit]{
     margin:10px;
     background-color:#ae6f46;
     color:white;
-    font-family: 'Titillium Web';
     font-weight:600;
     font-size:20px;
     padding:10px 15px;
@@ -89,7 +92,7 @@ input[type=submit]:hover{
     align-items:center;
     border-radius: 20px;
     padding-bottom:30px;
-    padding-left:20vw;
+    margin:0 auto;
     width:60vw;
 }  
 

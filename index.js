@@ -1,16 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     switchSlides(1,".slides");
     setInterval(()=>{switchSlides(1,".slides")},4000);
-
-
   });
+
+
 
 const prevBtn = document.querySelector(".arrow-back");
 const nxtBtn = document.querySelector(".arrow-front");
 
-function switchSlides(n, classname) {
 
-const slides = document.querySelectorAll(classname);
+
+function switchSlides(n, classname) {
+  const slides = document.querySelectorAll(classname);
+
     if (n === 1) {
       let temp = slides[slides.length - 1];
       let parentElement = slides[0].parentNode;
@@ -35,19 +37,40 @@ const slides = document.querySelectorAll(classname);
     
         parentElement.insertBefore(temp, slides[slides.length]);
       }
+
+      dynamicSlides();
     // if (n === 10){
     //   let element  = document.getElementById(".stage-active");
 
     // }
-    slides.forEach((slide, index) => {
-      if (index < 3) {
-        slide.classList.add("visible");
-      } else {
-        slide.classList.remove("visible");
-      }
-    });
+
 }
 
+function dynamicSlides(){
+  const slides = document.querySelectorAll(".slides");
+
+  function addVisibility(n, index, slide){
+    if (index < n) {
+      slide.classList.add("visible");
+    } else {
+      slide.classList.remove("visible");
+    }
+  }
+
+  slides.forEach((slide, index) => {
+  if (window.innerWidth<850){
+    addVisibility(1, index, slide);
+  } else if (window.innerWidth<1215){
+    addVisibility(2, index, slide);
+  } else{
+    console.log("Im here")
+    addVisibility(3,index, slide);
+
+  }
+  });
+}
   
 nxtBtn.addEventListener('click', () => switchSlides(1,".slides"));
 prevBtn.addEventListener('click', ()=> switchSlides(-1,".slides"));
+
+

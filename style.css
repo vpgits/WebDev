@@ -106,37 +106,25 @@ footer{
     user-select: none;
   }
 
-
-.normal-post1{
-    /* background-color:#808080; */
+.normal-post{
+    margin:10px auto;
+    padding:10px;
+    background-color:#9DC08B;
     display:flex;
     align-items:center;
-    width:70%;
-    font-size:24px;
+    width:80%;
+    height:350px;
+    font-size:25px;
     border-radius:50px;
-    margin-left:5vw;
+    padding-right:20px;
 }
-
-.normal-post1 img{
-    width:30vw;
+.normal-post img{
+    width:25vw;
     padding:40px;
     background-size:cover;
 }
 
-.normal-post2{
-    display:flex;
-    align-items:center;
-    width:70%;
-    font-size:24px;
-    border-radius:50px;
-    margin-left:20vw;
-}
 
-.normal-post2 img{
-    width:30vw;
-    padding:40px;
-    background-size:cover;
-}
 .footer-container{
     /* padding:10px; */
     width:100%;
@@ -237,7 +225,7 @@ footer{
         display:block;
         cursor:pointer;
     }
-    .normal-post1{
+    .normal-post{
         margin:10px auto;
         padding:10px;
         background-color:#d3d3d3;
@@ -249,28 +237,18 @@ footer{
         padding-right:20px;
     }
 
-    .normal-post2{
-        margin:10px auto;
-        padding:10px;
-        background-color:#d3d3d3;
-        display:flex;
-        align-items:center;
-        width:90%;
-        font-size:15px;
-        border-radius:50px;
-        padding-right:20px;
+
+    .slideshow{
+        margin-top:100px;
     }
 
-    .stage > .slides{
-        display:block;
-        flex-direction:row;
-        flex-wrap:wrap;
-    }
+
     footer{
         width:100%;
     }
  
 }
+
 
 
 //https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
