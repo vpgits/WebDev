@@ -6,54 +6,74 @@
 }
 body{
     transition: all 1.5s ease;
-    background-color: #609966;
+    background-color: #EDF1D6;
 }
-button{
-    margin-top: 20px;
-    margin-bottom: 20px ;
-    width: 140px;
-    height: 30px;
-    border-radius:10px;
-    cursor: pointer;
+.bigimage{
+    width:100%;
+    height:120%;
+    position:relative;
+    background-image: url(juliette-f-fb0_wj2MZk4-unsplash.jpg);
+    background-size:cover ;
+    transform: scale(1);
+    transition: 1s;
 }
-.boxs{
-    margin:0px ;
-    width:400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.contain{
-    position:absolute;
-    background:#9DC08B;
-    border-radius:50%;
-    height:50px;
-    width:50px;
-    margin:10px 10px;
-    cursor:pointer;
-    z-index: 1;
-}
-.contain i{
+.headline{
+    width:100%;
+    height:100%;
+    font-size: 26px;
+    color:white;
     display:flex;
     justify-content: center;
-    margin-top: 5%;
-    font-size: 40px;
-}
-.contain:hover .button{
-    transform: translateX(20px);
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
     
+
 }
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+.floating-button__button {
+    background-color: #609966;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+  .button-container {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .button-container.show {
+    display: flex;
+  }
+  
 .item{
     
     transition: 0.4s ease-in;
-    
+    width:40px;height: 40px;border-radius:20px;
 }
 .item1{
     transition-delay: 0.2s;
 }
 .item2{
     transition-delay: 0.2s;
+    
 }
 .item3{
     transition-delay: 0.3s;
@@ -93,6 +113,22 @@ button{
    padding-bottom:15px;
    border-radius:5px;
 }
+.image1{
+    cursor: pointer;
+    
+}
+
+.container .box .main img {
+    width: 95%;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+ }
+ 
+ .container .box .main img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.3);
+ }
 
 @media only screen and (max-width: 769px) {
     .container .box {
