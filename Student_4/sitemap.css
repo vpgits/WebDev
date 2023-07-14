@@ -1,20 +1,19 @@
-
 #w1{
     width:100px;
     height: 100px;
 }
 body{
     margin:0;
-    
+    background-color: #609966;
 }
 rect{
+    box-shadow: 3px 3px 5px;
     fill:transparent;
-    stroke:grey;
+    stroke:#9DC08B;
     stroke-width:5;
-   
 }
 line{
-    stroke:#867f7f;
+    stroke:#9DC08B;
     fill:none;
     stroke-width: 5;
 }
@@ -22,7 +21,7 @@ a:visited text{
     color:aquamarine;
 }
 a:hover {
-    background-color: #878484;
+    background-color: #f0f0f0;
 }
 
 
@@ -33,4 +32,8 @@ a:hover text {
 
 a:hover image {
     opacity: 0.5;
+}
+h1{
+    text-shadow:3px 3px 5px;
+    margin:50px;
 }
