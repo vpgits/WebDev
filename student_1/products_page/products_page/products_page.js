@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function purchaseClicked() {
   // Executes when the purchase button is clicked
 
+  window.localStorage.removeItem("cart");
+
+  let cart  = document.getElementById('shopping-cart').innerHTML;
+  
+  window.localStorage.setItem("cart", (cart) );
+
   window.location.assign("/student_1/payment_page/payment_page.html");
 
 
@@ -212,6 +218,7 @@ function updateCartTotal() {
   document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total;
   // Updates the total price display in the cart
 }
+
 
 
 

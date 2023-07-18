@@ -3,6 +3,14 @@ const warning = document.createElement('p') ;
 warning.classList.add("warning");
 
 
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    const cart = window.localStorage.getItem("cart");
+    console.log("hi");
+    console.log(document.querySelector(".cartCard main-container"));
+    document.querySelector(".cartCard main-container").innerHTML = cart;
+})
+
 function validateName(inputelement, parentelement){
     validName = false;
     let element = document.getElementById(inputelement);

@@ -2,6 +2,23 @@ let validName;
 const warning = document.createElement("p");
 warning.classList.add("warning");
 
+document.addEventListener('DOMContentLoaded', ()=>{
+  let cart = window.localStorage.getItem("cart");
+  console.log(cart);
+  cart = cart.replace('<button class="btn btn-primary btn-ProceedToCheckout" type="button">Proceed To Checkout</button>', "");
+  console.log(cart)
+
+  let cartCard = document.querySelector(".cartCard");
+  cartCard.innerHTML = cart;
+  var inputElements = cartCard.querySelectorAll('input');
+for (var i = 0; i < inputElements.length; i++) {
+    inputElements[i].readOnly = true;
+}
+
+  
+
+})
+
 function validateName(inputelement, parentelement) {
   validName = false;
   let element = document.getElementById(inputelement);
@@ -184,6 +201,7 @@ function switchFormsOne() {
 
 function switchFormsTwo() {
   if (validCard && validName && validEmail) {
-    window.location.replace("/student_2/comments.html");
+    window.location.assign("/student_2/feedback_form/comments.html");
+
   }
 }
