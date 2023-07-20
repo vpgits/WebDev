@@ -25,9 +25,12 @@ for (var i = 0; i < inputElements.length; i++) {
 
 //checks if the name is valid in form one and two
 let validName;
+let validStreet;
+let validCity;
+let cardName;
 
-function validateName(inputelement, parentelement) {
-  validName = false;
+function validateName(inputelement, parentelement, tracker) {
+  tracker = false;
   let element = document.getElementById(inputelement);
   element.addEventListener("input", () => {
     // element.classList.add("valid")
@@ -40,29 +43,24 @@ function validateName(inputelement, parentelement) {
       parentElement.appendChild(warning);
     } else {
       warning.textContent = null;
-      if (text.length < 7) {
-        warningText.textContent = "Should enter first and second name";
-      } else if (text.length >= 7) {
         if (!regex.test(text)) {
           warningText.textContent = "Should exclude symbols and numbers";
         } else {
-          validName = true;
-          console.log(validName);
+          tracker = true;
           parentElement.removeChild(warning);
         }
-      }
     }
   });
+  return tracker;
 }
 
 //validates the  numbers
 let validTele;
-let validCSV;
 let validZip;
+let validCSV;
 
 function validateNumber(inputelement,length,warningmsg,tracker) {
-  tracker = false;
-  console.log("hi")
+  tracker=false;
   let element = document.getElementById(inputelement);
   const warningText = document.querySelector(`.warning.${inputelement}`);
   const parentElement = element.parentNode;
@@ -135,7 +133,7 @@ function validateCreditCardNum() {
       // parentElement.appendChild(warningText);
     }
   }
-  console.log(validCard);
+
 }
 
 let validExpDate;
@@ -157,52 +155,33 @@ function validateExpiryDate() {
         warningText.textContent = "Invalid Year";
       } else {
         parentElement.removeChild(warning);
+        validExpDate=true;
       }
     }
   }
 }
 
 
-//validates the house number
-// let validHouseNumber;
-// function validateHouseNumber() {
-//   let regex = /^(\d+)(\/\d*)?$/;
-//   const number = document.getElementById("houseNo");
-//   const warningText = document.querySelector(".warning.houseNo");
-//   const parentElement = number.parentElement;
-//   warning.classList.add("houseNo");
-//   if (warningText === null) {
-//     parentElement.appendChild(warning);
-//   } else {
-//     if (!regex.test(number.value)) {
-//       // console.log("Im here");
-//       warning.textContent = "Enter a valid House number";
-//     } else {
-//       validHouseNumber = true;
-//       parentElement.removeChild(warning);
-//     }
-//   }
-//   return validHouseNumber;
-// }
 
 //validates form One
 function validateFormOne() {
-  let output = validName && validTele && validHouseNumber;
-  if(!output){
+  let output = validName && validTele && validZip && validStreet && validCity;
+  if(output==false){
+    console.log(output);
     alert("Please fill all fields. Hover to guide");
   }
   return output;
 
-  // return false;
 }
 
 //validates form Two
 function validateFormTwo() {
-  let output = validCard && validName && validEmail;
-    if(!output){
+  let output = validCard && cardName && validEmail &&validExpDate && validCSV;
+    if(output==false){
     alert("Please fill all fields. Hover to guide");
   }
   return output;
+
 }
 
 //disables form One and inserts form two
@@ -214,7 +193,8 @@ function switchFormsOne() {
   // document.getElementById("payment-details").classList.add("active");
   // document.querySelector("footer").style.position = "relative";
   // document.getElementById("user-details").style.marginTop = 0;
-  document.querySelectorAll(".btns.formOne").forEach((element) => {
+
+  document.querySelectorAll(".formOne").forEach((element) => {
     element.style.display = "none";
   });
   document.getElementById("payment-details").style.display="block";
@@ -229,7 +209,10 @@ function switchFormsOne() {
 
 //redirects user to comments page after successful submission
 function switchFormsTwo() {
-  if (validCard && validName && validEmail) {
-    window.location.assign("/student_2/feedback_form/comments.html");
-  }
+  // let output;
+  // output = validCard && cardName && validEmail && validExpDate;
+
+
+    window.location.href = "/student_2/feedback_form/comments.html";
+
 }

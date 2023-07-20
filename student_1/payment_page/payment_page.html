@@ -45,7 +45,7 @@ Student Name: M.B.V.Pesanjith  -->
           id="user-details"
           class="active"
           action="javascript:switchFormsOne()"
-          onsubmit="return validateFormOne()" autocomplete="off"
+
         >
           <div class="container">
             <h5>Shipping Details</h5>
@@ -56,8 +56,8 @@ Student Name: M.B.V.Pesanjith  -->
                 id="fname"
                 placeholder="Full Name"
                 title="Full name ex:'John Doe'"
-                oninput="return validateName('fname','fname-container')"
-                required  autocomplete="off"
+                oninput="return validateName('fname','fname-container', validName)"
+                required 
               />
             </div>
             <div class="mini-container">
@@ -69,11 +69,11 @@ Student Name: M.B.V.Pesanjith  -->
                 required
               />
             </div>
-            <div class="mini-container">
-              <input type="text" id="street" placeholder="Street Name" required />
+            <div class="mini-container" id="street-container">
+              <input type="text" id="street" placeholder="Street Name" oninput="return validateName('street','street-container', validStreet)" required />
             </div>
-            <div class="mini-container">
-              <input type="text" id="City" placeholder="City" required />
+            <div class="mini-container" id="city-container">
+              <input type="text" id="city" placeholder="City" oninput="return validateName('city','city-container', validCity)" required />
             </div>
             <div class="mini-container">
               <input
@@ -89,7 +89,7 @@ Student Name: M.B.V.Pesanjith  -->
             </div>
             <div class="mini-container telephone">
               <input
-                type="text"
+                type="number"
                 name="telephone"
                 id="telephone"
                 placeholder="Telephone Number"
@@ -109,8 +109,8 @@ Student Name: M.B.V.Pesanjith  -->
         <form
           id="payment-details"
           class="active formTwo"
-          action="javascript:switchFormsTwo()"
-          onsubmit=" return validateFormTwo()" 
+          action="javascript:switchFormsTwo()" 
+       
           style="display: none;"
         >
         
@@ -119,10 +119,10 @@ Student Name: M.B.V.Pesanjith  -->
             <div class="mini-container" id="cardname-container">
               <input
                 type="text"
-                id="name"
+                id="cname"
                 placeholder="Cardholder Name"
                 title="Cardholder Name ex: 'John Doe'"
-                oninput="return validateName('name','cardname-container')"
+                oninput="return validateName('cname','cardname-container',cardName)"
                 required
               />
             </div>
@@ -185,12 +185,12 @@ Student Name: M.B.V.Pesanjith  -->
                 max="999"
                 length="3"
                 title="CSV ex: xxx"
-                oninput="validateNumber('csv',3,'Invalid CSV', validCSV)"
+                oninput="validateNumber('csv',3,'Invalid CSV',validCSV)"
                 requried
               />
             </div>
             <div class="btns">
-              <input type="submit" value="Submit" id="submit" onclick="validateFormTwo()"/>
+              <input type="submit" value="Submit" id="submit" onsubmit="return validateFormTwo()"/>
               <input type="reset" value="Reset" id="reset" />
             </div>
           </div>
