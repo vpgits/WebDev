@@ -55,7 +55,7 @@ function validateName(inputelement, parentelement) {
   });
 }
 
-//validates the telephone number
+//validates the  numbers
 let validTele;
 let validCSV;
 let validZip;
