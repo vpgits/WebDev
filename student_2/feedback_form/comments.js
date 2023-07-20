@@ -10,24 +10,21 @@ let form = document.getElementById("form");
 //function to valdate whether an input has been made to the slider and the textbox
 function validateForms(){
 
-    submit.addEventListener('click', ()=> {
-        if (!validateForms()&&(!slider.classList.contains("invalid"))){
-            slider.classList.add("invalid");
-            slider.append("Please enter a rating");
-        }
-        if (!validateForms()&&(!textArea.classList.contains("invalid"))){
-            textArea.classList.add("invalid");
-            textArea.append("Please enter a reason");
-        }
-    })
+    // submit.addEventListener('click', ()=> {
+    //     if (!validateForms()&&(!slider.classList.contains("invalid"))){
+    //         slider.classList.add("invalid");
+    //         slider.append("Please enter a rating");
+    //     }
+    //     if (!validateForms()&&(!textArea.classList.contains("invalid"))){
+    //         textArea.classList.add("invalid");
+    //         textArea.append("Please enter a reason");
+    //     }
+    // })
 
     if (slider.classList.contains('valid') && textArea.classList.contains('valid')) {
-      setTimeout(() => {
-        const message = document.createElement('p');
-        message.textContent = 'Thank you. Redirecting to the home page.';
-        form.appendChild(message);
-      }, 2000);
-    }
+        window.location.href = "/index.html";
+    } else 
+ 
     return slider.classList.contains("valid") && textArea.classList.contains("valid");
 }
 
@@ -56,3 +53,24 @@ function informUser(){
 }
 
 informUser();
+
+
+
+submit.addEventListener('click', (e)=>{
+    if (slider.classList.contains('valid') && textArea.classList.contains('valid')) {
+      const link = document.createElement('a')  ;
+      let body;
+      const rating = document.getElementById("rating");
+      const text = document.getElementById("reason");
+      const device = document.getElementById("completion");
+      const future  =  document.getElementById("future");
+      body = `Hi, I really enjoyed the service.\n\nRating: ${rating.value}\nReason for rating : ${text.value}\nDevice of choice : ${device.value} \nFuture device of choice : ${future.value} \n\nA happy Customer. `;
+      
+      link.href = `mailto:venura.20221890@iit.ac.lk?subject=${encodeURIComponent("The CookBook Survey")}&body=${encodeURIComponent(body)}`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+        e.preventDefault();
+    }
+})

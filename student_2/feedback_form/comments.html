@@ -31,11 +31,11 @@ Student Name: M.B.V.Pesanjith  -->
         </div>
     </header>   
     <main>
-        <form action="../index.html" id="form" onsubmit="return validateForms()"  >
+        <form action="/index.html" id="form"  enctype="text/plain">
             <div class="container">
                 <label for="rating">How satisfied were you with our website today? Choose from 0 to 10, where 0 is extremely dissatisfied and 10 is extremely satisfied.</label>
-                <div class="rating-slider" id="rating-slider" onclick="return validate('rating-slider')">
-                    <input type="range" min="0" max="10" value="0" class="slider" id="rating" list="values"  >
+                <div class="rating-slider" id="rating-slider" onclick="return validate('rating-slider')" >
+                    <input type="range" min="0" max="10" value="0" name ="Rating" class="slider" id="rating" list="values" required  >
                     <datalist id="values">
                         <option value="0" >0</option>
                         <option value="1">1</option>
@@ -53,30 +53,30 @@ Student Name: M.B.V.Pesanjith  -->
             </div>
            <div class="container">
             <label for="reason">Could you please tell us your reasons for giving this rating?</label><br>
-            <textarea name="Reason" id="reason" cols="30" rows="10" placeholder="I feel like..." required onclick="return validate('reason')"></textarea><br>
+            <textarea name="Could you please tell us your reasons for giving this rating?" id="reason" cols="30" rows="10" placeholder="I feel like..." required onclick="return validate('reason')"></textarea><br>
             <label for="completion">How did you want to complete this task today? (optional)</label>
             <br>
             <select name="Completion" id="completion" class="Completion">
                 <option value="0" selected>Please choose a device</option>
-                <option value="1" >Phone</option>
-                <option value="2">Website</option>
-                <option value="3">Web Chat</option>
-                <option value="4">Social Media</option>
-                <option value="5">Email</option>
+                <option value="Phone" >Phone</option>
+                <option value="Website">Website</option>
+                <option value="Web Chat">Web Chat</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Email">Email</option>
             </select>
            </div>
             <div class="container">
                 <label for="future">If you had to complete this task again, how would you do it? (optional)</label><br>
-                <select name="Future" id="future">
+                <select name="If you had to complete this task again, how would you do it?" id="future">
                     <option value="0" selected>Please choose a device</option>
-                    <option value="1" >Phone</option>
-                    <option value="2">Website</option>
-                    <option value="3">WebChat</option>
-                    <option value="4">Social Media</option>
-                    <option value="5">Email</option>
+                    <option value="Phone" >Phone</option>
+                    <option value="Website">Website</option>
+                    <option value="WebChat">WebChat</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Email">Email</option>
                 </select>
             </div>
-            <input type="submit" value="Submit" id="submit"  >
+            <input type="submit" value="Submit" id="submit" onclick="validateForms()">
         </form>
     </main>
     <footer>
