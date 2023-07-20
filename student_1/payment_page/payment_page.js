@@ -124,28 +124,7 @@ function validateCreditCardNum() {
   console.log(validCard);
 }
 
-function validateExpiryDate() {
-  const date = document.getElementById("expiry-date");
-  const warningText = document.querySelector(".warning.expiry-date");
-  const parentElement = date.parentElement;
-  warning.classList.add("expiry-date");
-  var regex = /^\d+\/\d+$/; //chatgpt formatted like so checks for 12/24 format
-  if (warningText === null) {
-    parentElement.appendChild(warning);
-  } else {
-    if (!regex.test(date.value)) {
-      warningText.textContent = "Enter in the given format MM/YY";
-    } else {
-      if (date.value.slice(0, 2) > 12) {
-        warningText.textContent = "Month is invalid";
-      } else if (date.value.length != 5) {
-        warningText.textContent = "Invalid Year";
-      } else {
-        parentElement.removeChild(warning);
-      }
-    }
-  }
-}
+
 
 let validHouseNumber;
 function validateHouseNumber() {
@@ -169,14 +148,21 @@ function validateHouseNumber() {
 }
 
 function validateFormOne() {
-  let output = validName && validateNumber() && validateHouseNumber();
+  let output = validName && validTele && validHouseNumber;
+  if(!output){
+    alert("Please fill all fields. Hover to guide");
+  }
   return output;
 
   // return false;
 }
 
 function validateFormTwo() {
-  return validCard && validName && validEmail;
+  let output = validCard && validName && validEmail;
+    if(!output){
+    alert("Please fill all fields. Hover to guide");
+  }
+  return output;
 }
 
 function switchFormsOne() {
@@ -190,6 +176,7 @@ function switchFormsOne() {
   document.querySelectorAll(".btns.formOne").forEach((element) => {
     element.style.display = "none";
   });
+  document.getElementById("payment-details").style.display="block";
   const formElements = document
     .getElementById("user-details")
     .getElementsByTagName("input");
@@ -202,6 +189,5 @@ function switchFormsOne() {
 function switchFormsTwo() {
   if (validCard && validName && validEmail) {
     window.location.assign("/student_2/feedback_form/comments.html");
-
   }
 }

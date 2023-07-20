@@ -13,14 +13,14 @@
     
   </head>
   <body>
-    <header id="#top"> 
+    <header id="#top" > 
       <div class="header-container" id="navbar">
           <div class="header-icon">
               <img id="headerImg" src="/media//icons/header.png" alt="icon">   
               <h1>The Cookbook</h1>
               <a  ><span rel="preload" class="material-symbols-outlined" id="hamburgMenu">menu</span></a> 
           </div>
-          <div class="header-links" id="links" style="display: flex">
+          <div class="header-links" id="links"  style="display: none;">
               <a href="/index.html" class="current">Home</a>
               <a href="/student_3/Quiz Page/index.html">Quiz</a>
               <a href="/student_1/products_page/products_page/products_page.html">Products</a>
@@ -34,151 +34,161 @@
       <div class="wrapper">
         <div class="cartCard" >
         </div>
+        <div class="main-container">
+          <form
+          id="user-details"
+          class="active"
+          action="javascript:switchFormsOne()"
+          onsubmit="return validateFormOne()" autocomplete="off"
+        >
+          <div class="container">
+            <h5>Shipping Details</h5>
+            <div class="mini-container" id="fname-container">
+              <input
+                type="text"
+                name="fname"
+                id="fname"
+                placeholder="Full Name"
+                title="Full name ex:'John Doe'"
+                oninput="return validateName('fname','fname-container')"
+                required  autocomplete="off"
+              />
+            </div>
+  
+            <div class="mini-container">
+              <input
+                type="text"
+                id="houseNo"
+                placeholder="House Number"
+                title="House Number ex:'9/34'"
+                oninput="return validateHouseNumber()"
+                required
+              />
+            </div>
+            <div class="mini-container">
+              <input type="text" id="street" placeholder="Street Name" required />
+            </div>
+            <div class="mini-container">
+              <input type="text" id="City" placeholder="City" required />
+            </div>
+            <div class="mini-container">
+              <input
+                type="number"
+                id="zip"
+                placeholder="Zip Code"
+                min="01000"
+                max="99999"
+                title="Zip Code ex: 00000"
+                required
+              />
+            </div>
+            <div class="mini-container telephone">
+              <input
+                type="text"
+                name="telephone"
+                id="telephone"
+                placeholder="Telephone Number"
+                title="Telephone number ex: 0123456789"
+                oninput=" return validateNumber()"
+                required
+              />
+            </div>
+            <div class="btns formOne">
+              <input type="submit" value="Submit" id="submit" onclick="validateFormOne()"/>
+              <input type="reset" value="Reset" id="reset" />
+            </div>
+          </div>
+        </form>
+        </div>
+        
+        <form
+          id="payment-details"
+          class="active formTwo"
+          action="javascript:switchFormsTwo()"
+          onsubmit=" return validateFormTwo()" style="display: none;"
+        >
+          <div class="container">
+            <h5>Payment Details</h5>
+            <div class="mini-container" id="cardname-container">
+              <input
+                type="text"
+                id="name"
+                placeholder="Cardholder Name"
+                title="Cardholder Name ex: 'John Doe'"
+                oninput="return validateName('name','cardname-container')"
+                required
+              />
+            </div>
+            <div class="mini-container">
+              <input
+                type="email"
+                name="emal"
+                id="email"
+                placeholder="Email Address"
+                title="email address ex: hi@thecookbook.com"
+                oninput="return validateEmail()"
+                required
+              />
+            </div>
+            <div class="mini-container">
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="Card Number"
+                title="Card Number ex: xxxx-xxxx-xxxx-xxxx"
+                oninput="return validateCreditCardNum()"
+              />
+            </div>
+            <div class="mini-container" id="yearmonth">
+              <select name="month" id="month" required>
+                <option value="0">Month</option>
+                <option value="1">Janurary</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              <select name="Year" id="year" required>
+                <option value="0">Year</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2028">2029</option>
+                <option value="2028">2030</option>
+              </select>
+            </div>
+            <div class="mini-container">
+              <input
+                type="number"
+                id="csv"
+                placeholder="CSV(XXX)"
+                min="0"
+                max="999"
+                length="3"
+                title="CSV ex: xxx"
+                requried
+              />
+            </div>
+            <div class="btns">
+              <input type="submit" value="Submit" id="submit" onclick="validateFormTwo()"/>
+              <input type="reset" value="Reset" id="reset" />
+            </div>
+          </div>
+        </form>
+        </div>
       </div>
       
-      <div class="main-container">
-        <form
-        id="user-details"
-        class="active"
-        action="javascript:switchFormsOne()"
-        onsubmit="return validateFormOne()" autocomplete="off"
-      >
-        <div class="container">
-          <h5>Shipping Details</h5>
-          <div class="mini-container" id="fname-container">
-            <input
-              type="text"
-              name="fname"
-              id="fname"
-              placeholder="Full Name"
-              oninput="return validateName('fname','fname-container')"
-              required  autocomplete="off"
-            />
-          </div>
-
-          <div class="mini-container">
-            <input
-              type="text"
-              id="houseNo"
-              placeholder="House Number"
-              oninput="return validateHouseNumber()"
-              required
-            />
-          </div>
-          <div class="mini-container">
-            <input type="text" id="street" placeholder="Street Name" required />
-          </div>
-          <div class="mini-container">
-            <input type="text" id="City" placeholder="City" required />
-          </div>
-          <div class="mini-container">
-            <input
-              type="number"
-              id="zip"
-              placeholder="Zip Code"
-              min="01000"
-              max="99999"
-              required
-            />
-          </div>
-          <div class="mini-container telephone">
-            <input
-              type="text"
-              name="telephone"
-              id="telephone"
-              placeholder="telephone Number"
-              oninput=" return validateNumber()"
-              required
-            />
-          </div>
-          <div class="btns formOne">
-            <input type="submit" value="Submit" id="submit" />
-            <input type="reset" value="Reset" id="reset" />
-          </div>
-        </div>
-      </form>
-
-      <form
-        id="payment-details"
-        class="active"
-        action="javascript:switchFormsTwo()"
-        onsubmit=" return validateFormTwo()"
-      >
-        <div class="container">
-          <h5>Payment Details</h5>
-          <div class="mini-container" id="cardname-container">
-            <input
-              type="text"
-              id="name"
-              placeholder="Cardholder Name"
-              oninput="return validateName('name','cardname-container')"
-              required
-            />
-          </div>
-          <div class="mini-container">
-            <input
-              type="email"
-              name="emal"
-              id="email"
-              placeholder="Email Address"
-              oninput="return validateEmail()"
-              required
-            />
-          </div>
-          <div class="mini-container">
-            <input
-              type="text"
-              id="cardNumber"
-              placeholder="Card Number"
-              oninput="return validateCreditCardNum()"
-            />
-          </div>
-          <div class="mini-container" id="yearmonth">
-            <select name="month" id="month" required>
-              <option value="0">Month</option>
-              <option value="1">Janurary</option>
-              <option value="2">February</option>
-              <option value="3">March</option>
-              <option value="4">April</option>
-              <option value="5">May</option>
-              <option value="6">June</option>
-              <option value="7">July</option>
-              <option value="8">August</option>
-              <option value="9">September</option>
-              <option value="10">October</option>
-              <option value="11">November</option>
-              <option value="12">December</option>
-            </select>
-            <select name="Year" id="year" required>
-              <option value="0">Year</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-              <option value="2027">2027</option>
-              <option value="2028">2028</option>
-              <option value="2028">2029</option>
-              <option value="2028">2030</option>
-            </select>
-          </div>
-          <div class="mini-container">
-            <input
-              type="number"
-              id="csv"
-              placeholder="CSV(XXX)"
-              min="0"
-              max="999"
-              length="3"
-              requried
-            />
-          </div>
-          <div class="btns">
-            <input type="submit" value="Submit" id="submit" />
-            <input type="reset" value="Reset" id="reset" />
-          </div>
-        </div>
-      </form>
-      </div>
+     
       
 
       <div class="receipt inactive"></div>
@@ -213,6 +223,6 @@
       </div>
     </footer>
     <script src="payment_page.js"></script>
-    <script src="/script.js"></script>
+    <!-- <script src="/script.js"></script> -->
   </body>
 </html>
