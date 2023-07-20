@@ -172,6 +172,11 @@ ul {
     transform: scale(0.5);
 }
 
+.normal-post a{
+    text-decoration:none;
+    color:#EDF1D6;
+    font-size:18px;
+}
 
 
 

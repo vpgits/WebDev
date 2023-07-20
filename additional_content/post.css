@@ -1,0 +1,26 @@
+body{
+
+
+}
+
+main{
+    margin:20px auto;
+    width: 70vw;
+    
+}
+
+main *{
+    padding:10px;
+}
+
+h1, h2{
+    color: #40513B;
+}
+
+p{
+    text-align:left;
+}
+
+main > a{
+    color:#40513B
+}
