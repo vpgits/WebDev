@@ -1,4 +1,9 @@
+//  Student Role: student_2
+// Student Name: M.B.V.Pesanjith 
+
+//shrinks the header when the window is being scrolled
 window.onscroll = function() {headerShrink()};
+
 
 function headerShrink(){
   var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -13,6 +18,8 @@ function headerShrink(){
     }
 }
 
+
+//function to remove header links and convert it into a hamburg menu with dropdown lsit
 function hamburgMenu(){
     const element = document.getElementById("links");
     if (element.className === "header-links") element.className+='-hamburg';

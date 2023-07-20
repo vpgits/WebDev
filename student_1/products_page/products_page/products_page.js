@@ -59,7 +59,7 @@ function purchaseClicked() {
 
   let cart  = document.getElementById('shopping-cart').innerHTML;
   
-  window.localStorage.setItem("cart", (cart) );
+  window.localStorage.setItem("cart", (cart) ); //student_2
 
   window.location.assign("/student_1/payment_page/payment_page.html");
 

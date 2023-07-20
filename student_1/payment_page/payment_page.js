@@ -1,12 +1,19 @@
-let validName;
+// Student Role: student_2
+// Student Name: M.B.V.Pesanjith 
+
+
+
+
+//creates a warning element to be appended to the DOM
 const warning = document.createElement("p");
 warning.classList.add("warning");
 
+//loads data via the localstorage API and disables input on elements of the retrived element
 document.addEventListener('DOMContentLoaded', ()=>{
   let cart = window.localStorage.getItem("cart");
-  console.log(cart);
+
   cart = cart.replace('<button class="btn btn-primary btn-ProceedToCheckout" type="button">Proceed To Checkout</button>', "");
-  console.log(cart)
+
 
   let cartCard = document.querySelector(".cartCard");
   cartCard.innerHTML = cart;
@@ -14,10 +21,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 for (var i = 0; i < inputElements.length; i++) {
     inputElements[i].readOnly = true;
 }
-
-  
-
 })
+
+//checks if the name is valid in form one and two
+let validName;
 
 function validateName(inputelement, parentelement) {
   validName = false;
@@ -48,30 +55,35 @@ function validateName(inputelement, parentelement) {
   });
 }
 
+//validates the telephone number
 let validTele;
+let validCSV;
+let validZip;
 
-function validateNumber() {
-  validTele = false;
-  let element = document.getElementById("telephone");
-  const warningText = document.querySelector(".warning.telephone");
+function validateNumber(inputelement,length,warningmsg,tracker) {
+  tracker = false;
+  console.log("hi")
+  let element = document.getElementById(inputelement);
+  const warningText = document.querySelector(`.warning.${inputelement}`);
   const parentElement = element.parentNode;
-  warning.classList.add("telephone");
+  warning.classList.add(`${inputelement}`);
   if (warningText === null) {
     parentElement.appendChild(warning);
   } else {
     warning.textContent = null;
     if (element.value.length != 0) {
-      if (element.value.length != 10) {
-        warningText.textContent = "Enter a valid phone number";
-      } else if (element.value.length === 10) {
+      if (element.value.length != length) {
+        warningText.textContent = warningmsg
+      } else if (element.value.length === length) {
         parentElement.removeChild(warning);
-        validTele = true;
+        tracker = true;
       }
     }
   }
-  return validTele;
+  return tracker;
 }
 
+//validates the email
 let validEmail;
 function validateEmail() {
   validEmail = false;
@@ -91,6 +103,8 @@ function validateEmail() {
     }
   }
 }
+
+//validates the credit card number
 let validCard;
 function validateCreditCardNum() {
   const num = document.getElementById("cardNumber");
@@ -125,28 +139,29 @@ function validateCreditCardNum() {
 }
 
 
+//validates the house number
+// let validHouseNumber;
+// function validateHouseNumber() {
+//   let regex = /^(\d+)(\/\d*)?$/;
+//   const number = document.getElementById("houseNo");
+//   const warningText = document.querySelector(".warning.houseNo");
+//   const parentElement = number.parentElement;
+//   warning.classList.add("houseNo");
+//   if (warningText === null) {
+//     parentElement.appendChild(warning);
+//   } else {
+//     if (!regex.test(number.value)) {
+//       // console.log("Im here");
+//       warning.textContent = "Enter a valid House number";
+//     } else {
+//       validHouseNumber = true;
+//       parentElement.removeChild(warning);
+//     }
+//   }
+//   return validHouseNumber;
+// }
 
-let validHouseNumber;
-function validateHouseNumber() {
-  let regex = /^(\d+)(\/\d*)?$/;
-  const number = document.getElementById("houseNo");
-  const warningText = document.querySelector(".warning.houseNo");
-  const parentElement = number.parentElement;
-  warning.classList.add("houseNo");
-  if (warningText === null) {
-    parentElement.appendChild(warning);
-  } else {
-    if (!regex.test(number.value)) {
-      // console.log("Im here");
-      warning.textContent = "Enter a valid House number";
-    } else {
-      validHouseNumber = true;
-      parentElement.removeChild(warning);
-    }
-  }
-  return validHouseNumber;
-}
-
+//validates form One
 function validateFormOne() {
   let output = validName && validTele && validHouseNumber;
   if(!output){
@@ -157,6 +172,7 @@ function validateFormOne() {
   // return false;
 }
 
+//validates form Two
 function validateFormTwo() {
   let output = validCard && validName && validEmail;
     if(!output){
@@ -165,6 +181,7 @@ function validateFormTwo() {
   return output;
 }
 
+//disables form One and inserts form two
 function switchFormsOne() {
   //toggle visibility of the form
   // document.getElementById("user-details").classList.remove("active");
@@ -186,6 +203,7 @@ function switchFormsOne() {
   }
 }
 
+//redirects user to comments page after successful submission
 function switchFormsTwo() {
   if (validCard && validName && validEmail) {
     window.location.assign("/student_2/feedback_form/comments.html");

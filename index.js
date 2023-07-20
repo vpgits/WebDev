@@ -1,3 +1,7 @@
+//  Student Role: student_2
+// Student Name: M.B.V.Pesanjith 
+
+//switches slides on the slideshow
 document.addEventListener("DOMContentLoaded", function() {
     switchSlides(1,".slides");
     setInterval(()=>{switchSlides(1,".slides")},4000);
@@ -9,7 +13,7 @@ const prevBtn = document.querySelector(".arrow-back");
 const nxtBtn = document.querySelector(".arrow-front");
 
 
-
+//custom function to switch slides
 function switchSlides(n, classname) {
   const slides = document.querySelectorAll(classname);
 
@@ -46,6 +50,7 @@ function switchSlides(n, classname) {
 
 }
 
+//custom function to change visible number of slides
 function dynamicSlides(){
   const slides = document.querySelectorAll(".slides");
 
@@ -69,7 +74,8 @@ function dynamicSlides(){
   }
   });
 }
-  
+
+//event listeners for manual slide change
 nxtBtn.addEventListener('click', () => switchSlides(1,".slides"));
 prevBtn.addEventListener('click', ()=> switchSlides(-1,".slides"));
 
