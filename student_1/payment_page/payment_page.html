@@ -110,8 +110,10 @@ Student Name: M.B.V.Pesanjith  -->
           id="payment-details"
           class="active formTwo"
           action="javascript:switchFormsTwo()"
-          onsubmit=" return validateFormTwo()" style="display: none;"
+          onsubmit=" return validateFormTwo()" 
+          style="display: none;"
         >
+        
           <div class="container">
             <h5>Payment Details</h5>
             <div class="mini-container" id="cardname-container">
@@ -144,7 +146,11 @@ Student Name: M.B.V.Pesanjith  -->
                 oninput="return validateCreditCardNum()"
               />
             </div>
-            <div class="mini-container" id="yearmonth">
+            <div class="mini-container">
+              <input type="text" name="expiry" id="expiry-date" placeholder="12/24" oninput="validateExpiryDate()">
+            </div>
+            
+            <!-- <div class="mini-container" id="yearmonth">
               <select name="month" id="month" required>
                 <option value="1">Janurary</option>
                 <option value="2">February</option>
@@ -169,7 +175,7 @@ Student Name: M.B.V.Pesanjith  -->
                 <option value="2028">2029</option>
                 <option value="2028">2030</option>
               </select>
-            </div>
+            </div> -->
             <div class="mini-container">
               <input
                 type="number"

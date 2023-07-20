@@ -138,6 +138,30 @@ function validateCreditCardNum() {
   console.log(validCard);
 }
 
+let validExpDate;
+function validateExpiryDate() {
+  const date = document.getElementById("expiry-date");
+  const warningText = document.querySelector(".warning.expiry-date");
+  const parentElement = date.parentElement;
+  warning.classList.add("expiry-date");
+  var regex = /^\d+\/\d+$/; //chatgpt formatted like so checks for 12/24 format
+  if (warningText === null) {
+    parentElement.appendChild(warning);
+  } else {
+    if (!regex.test(date.value)) {
+      warningText.textContent = "Enter in the given format MM/YY";
+    } else {
+      if (date.value.slice(0, 2) > 12) {
+        warningText.textContent = "Month is invalid";
+      } else if (date.value.length != 5) {
+        warningText.textContent = "Invalid Year";
+      } else {
+        parentElement.removeChild(warning);
+      }
+    }
+  }
+}
+
 
 //validates the house number
 // let validHouseNumber;
