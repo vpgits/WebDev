@@ -117,7 +117,7 @@ footer{
     padding:20px;
     background-color:#9DC08B;
     width: 40%;
-    height: 400px;
+    min-height: 400px;
     font-size:23px;    
     border-radius:50px;
     display:flex;
@@ -137,7 +137,7 @@ footer{
     display:flex;
     padding:30px;
     width: 60%;
-    height:250px;;
+    min-height:250px;
 }
 
 ul {
@@ -148,6 +148,7 @@ ul {
     display:flex;
     flex-wrap:wrap;
     width:90wv;
+    margin:20px 10vw;
 }
 
 .footer-container{
