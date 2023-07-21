@@ -33,7 +33,28 @@ a:hover text {
 a:hover image {
     opacity: 0.5;
 }
+rect:hover {
+    color:aqua;
+}
 h1{
     text-shadow:3px 3px 5px;
     margin:50px;
+}
+
+.bigimage{
+    width:100%;
+    height:600px;
+    position:relative;
+    background-image: url(img/ratul-ghosh-NPrWYa69Mz0-unsplash.jpg);
+    background-size:cover ;
+}
+.headline{
+    width:100%;
+    height:100%;
+    font-size: 26px;
+    color:white;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background-color: rgba(0, 0, 0, 0.5);
 }
