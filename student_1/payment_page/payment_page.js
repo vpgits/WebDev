@@ -24,16 +24,10 @@ for (var i = 0; i < inputElements.length; i++) {
 })
 
 //checks if the name is valid in form one and two
-let validName;
-let validStreet;
-let validCity;
-let cardName;
 
-function validateName(inputelement, parentelement, tracker) {
-  tracker = false;
-  let element = document.getElementById(inputelement);
-  element.addEventListener("input", () => {
-    // element.classList.add("valid")
+
+function validateName(inputelement, parentelement) {
+    let element = document.getElementById(inputelement);
     const text = element.value;
     const warningText = document.querySelector(".warning." + inputelement);
     const parentElement = document.getElementById(parentelement);
@@ -45,22 +39,19 @@ function validateName(inputelement, parentelement, tracker) {
       warning.textContent = null;
         if (!regex.test(text)) {
           warningText.textContent = "Should exclude symbols and numbers";
+          return false;
         } else {
-          tracker = true;
           parentElement.removeChild(warning);
+          return true;
         }
     }
-  });
-  return tracker;
 }
 
 //validates the  numbers
-let validTele;
-let validZip;
-let validCSV;
 
-function validateNumber(inputelement,length,warningmsg,tracker) {
-  tracker=false;
+
+function validateNumber(inputelement,length,warningmsg) {
+
   let element = document.getElementById(inputelement);
   const warningText = document.querySelector(`.warning.${inputelement}`);
   const parentElement = element.parentNode;
@@ -72,19 +63,19 @@ function validateNumber(inputelement,length,warningmsg,tracker) {
     if (element.value.length != 0) {
       if (element.value.length != length) {
         warningText.textContent = warningmsg
+        return false;
       } else if (element.value.length === length) {
         parentElement.removeChild(warning);
-        tracker = true;
+        return true;
       }
     }
   }
-  return tracker;
+;
 }
 
 //validates the email
-let validEmail;
+
 function validateEmail() {
-  validEmail = false;
   let email = document.getElementById("email");
   var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //chatgpt
   const warningText = document.querySelector(".warning.email");
@@ -95,15 +86,16 @@ function validateEmail() {
   } else {
     if (!regex.test(email.value)) {
       warningText.textContent = "Enter a valid email";
+      return false;
     } else {
-      validEmail = true;
       parentElement.removeChild(warning);
+      return false;
     }
   }
 }
 
 //validates the credit card number
-let validCard;
+
 function validateCreditCardNum() {
   const num = document.getElementById("cardNumber");
   const warningText = document.querySelector(".warning.number");
@@ -126,17 +118,17 @@ function validateCreditCardNum() {
         warningText.textContent = "A valid card number must have 16 digits";
       } else if (num.value.length === 19) {
         parentElement.removeChild(warning);
-        validCard = true;
+        return  true;
       }
     } else {
       warningText.textContent = "Enter digits";
-      // parentElement.appendChild(warningText);
+      return false;
     }
   }
 
 }
 
-let validExpDate;
+
 function validateExpiryDate() {
   const date = document.getElementById("expiry-date");
   const warningText = document.querySelector(".warning.expiry-date");
@@ -151,49 +143,64 @@ function validateExpiryDate() {
     } else {
       if (date.value.slice(0, 2) > 12) {
         warningText.textContent = "Month is invalid";
+        return false;
       } else if (date.value.length != 5) {
         warningText.textContent = "Invalid Year";
+        return false;
       } else {
         parentElement.removeChild(warning);
-        validExpDate=true;
+        return true;
       }
     }
   }
 }
 
+const submitOne = document.getElementById("submitOne");
+const submitTwo = document.getElementById("submitTwo");
+
+async function validateAndSubmitOne(e) {
+
+  const validFname = await validateName('fname', 'fname-container');
+  const validStreetName = await validateName('street', 'street-container');
+  const validCityName = await validateName('city', 'city-container');
+  const validZip = await validateNumber('zip', 5, 'Invalid Zip Code');
+  const validTele = await validateNumber('telephone', 10, 'Invalid Telephone Number');
 
 
-//validates form One
-function validateFormOne() {
-  let output = validName && validTele && validZip && validStreet && validCity;
-  if(output==false){
-    console.log(output);
+  if (!(validFname && validStreetName && validCityName && validZip && validTele)) {
+    e.preventDefault();
     alert("Please fill all fields. Hover to guide");
   }
-  return output;
-
 }
+
+async function validateAndSubmitTwo(e) {
+
+  const validCname = await validateName('cname','cardname-container')
+  const validEmail = await validateEmail();
+  const validCardNum = await validateCreditCardNum();
+  const validExpDate = await validateExpiryDate();
+  const validCSV = await validateNumber('csv',3,'Invalid CSV');
+  if (!(validCname && validEmail && validCardNum && validExpDate && validCSV)) {
+    e.preventDefault();
+    alert("Please fill all fields. Hover to guide");
+  }
+}
+
+
+submitOne.addEventListener('click', validateAndSubmitOne);
+submitTwo.addEventListener('click',validateAndSubmitTwo )
+
+//validates form One
+
 
 //validates form Two
 function validateFormTwo() {
-  let output = validCard && cardName && validEmail &&validExpDate && validCSV;
-    if(output==false){
-    alert("Please fill all fields. Hover to guide");
-  }
-  return output;
+  
 
 }
 
 //disables form One and inserts form two
 function switchFormsOne() {
-  //toggle visibility of the form
-  // document.getElementById("user-details").classList.remove("active");
-  // document.getElementById("user-details").classList.add("inactive");
-  // document.getElementById("payment-details").classList.remove("inactive");
-  // document.getElementById("payment-details").classList.add("active");
-  // document.querySelector("footer").style.position = "relative";
-  // document.getElementById("user-details").style.marginTop = 0;
-
   document.querySelectorAll(".formOne").forEach((element) => {
     element.style.display = "none";
   });
@@ -202,7 +209,6 @@ function switchFormsOne() {
     .getElementById("user-details")
     .getElementsByTagName("input");
   for (let i = 0; i < formElements.length; i++) {
-    console.log(formElements[i].innerHTML);
     formElements[i].disabled = true;
   }
 }

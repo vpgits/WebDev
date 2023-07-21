@@ -13,6 +13,7 @@ Student Name: M.B.V.Pesanjith  -->
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link rel="stylesheet" href="payment_page.css" />
+    <link rel="icon" href="/media/icons/header.png" type="image/x-icon">
   </head>
   <body>
     <!-- header -->
@@ -45,7 +46,6 @@ Student Name: M.B.V.Pesanjith  -->
           id="user-details"
           class="active"
           action="javascript:switchFormsOne()"
-
         >
           <div class="container">
             <h5>Shipping Details</h5>
@@ -56,7 +56,7 @@ Student Name: M.B.V.Pesanjith  -->
                 id="fname"
                 placeholder="Full Name"
                 title="Full name ex:'John Doe'"
-                oninput="return validateName('fname','fname-container', validName)"
+                oninput="return validateName('fname','fname-container')"
                 required 
               />
             </div>
@@ -70,10 +70,10 @@ Student Name: M.B.V.Pesanjith  -->
               />
             </div>
             <div class="mini-container" id="street-container">
-              <input type="text" id="street" placeholder="Street Name" oninput="return validateName('street','street-container', validStreet)" required />
+              <input type="text" id="street" placeholder="Street Name" oninput="return validateName('street','street-container')" required />
             </div>
             <div class="mini-container" id="city-container">
-              <input type="text" id="city" placeholder="City" oninput="return validateName('city','city-container', validCity)" required />
+              <input type="text" id="city" placeholder="City" oninput="return validateName('city','city-container')" required />
             </div>
             <div class="mini-container">
               <input
@@ -84,7 +84,7 @@ Student Name: M.B.V.Pesanjith  -->
                 max="99999"
                 title="Zip Code ex: 00000"
                 required
-                oninput="validateNumber('zip',5,'Invalid Zip Code',validZip)"
+                oninput="validateNumber('zip',5,'Invalid Zip Code')"
               />
             </div>
             <div class="mini-container telephone">
@@ -94,13 +94,13 @@ Student Name: M.B.V.Pesanjith  -->
                 id="telephone"
                 placeholder="Telephone Number"
                 title="Telephone number ex: 0123456789"
-                oninput=" return validateNumber('telephone', 10, 'Invalid Telephone Number', validTele)"
+                oninput=" return validateNumber('telephone', 10, 'Invalid Telephone Number')"
                 required
               />
             </div>
             <div class="btns formOne">
-              <input type="submit" value="Submit" id="submit" onclick="validateFormOne()"/>
-              <input type="reset" value="Reset" id="reset" />
+              <input class="submit" type="submit" value="Submit" id="submitOne" />
+              <input class="reset" type="reset" value="Reset" id="reset" />
             </div>
           </div>
         </form>
@@ -110,7 +110,7 @@ Student Name: M.B.V.Pesanjith  -->
           id="payment-details"
           class="active formTwo"
           action="javascript:switchFormsTwo()" 
-       
+          onsubmit="return validateFormTwo()"
           style="display: none;"
         >
         
@@ -122,8 +122,8 @@ Student Name: M.B.V.Pesanjith  -->
                 id="cname"
                 placeholder="Cardholder Name"
                 title="Cardholder Name ex: 'John Doe'"
-                oninput="return validateName('cname','cardname-container',cardName)"
-                required
+                oninput="return validateName('cname','cardname-container')"
+                
               />
             </div>
             <div class="mini-container">
@@ -134,7 +134,7 @@ Student Name: M.B.V.Pesanjith  -->
                 placeholder="Email Address"
                 title="email address ex: hi@thecookbook.com"
                 oninput="return validateEmail()"
-                required
+                
               />
             </div>
             <div class="mini-container">
@@ -183,20 +183,18 @@ Student Name: M.B.V.Pesanjith  -->
                 placeholder="CSV(XXX)"
                 min="0"
                 max="999"
-                length="3"
                 title="CSV ex: xxx"
-                oninput="validateNumber('csv',3,'Invalid CSV',validCSV)"
-                requried
+                oninput="validateNumber('csv',3,'Invalid CSV')"
               />
             </div>
             <div class="btns">
-              <input type="submit" value="Submit" id="submit" onsubmit="return validateFormTwo()"/>
-              <input type="reset" value="Reset" id="reset" />
+              <input class="submit" type="submit" value="Submit" id="submitTwo" />
+              <input class="reset" type="reset" value="Reset" id="reset" />
             </div>
           </div>
         </form>
         </div>
-      </div>
+
       <!-- scroll to top -->
       <a href="#top"
         ><img
