@@ -1,6 +1,5 @@
-/* Student Role: student_1
+/* Student Role: student 1
    Student Name: Heshan Wanigasinghe */
-
 
 * {
   box-sizing: border-box;
@@ -16,11 +15,11 @@ body {
 }
 
 .heading {
-  width:90vw;
-  margin-left:auto;
-  margin-right:auto;
-  border-radius:20px;
-  margin-bottom:20px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 6em;
   font-weight: normal;
@@ -43,25 +42,25 @@ body {
   font-size: 2.5em;
 }
 
-.scroll-to-shopping-cart{
+.scroll-to-shopping-cart {
   height: 15px;
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 9999;
-  color: #EDF1D6;
+  color: #edf1d6;
   background-color: #40513b;
   padding: 15px;
   margin: 10px;
 }
 
-.scroll-to-shopping-cart img{
+.scroll-to-shopping-cart img {
   height: 50px;
 }
 
-#scroll-to-top button{
+#scroll-to-top button {
   padding: 20px;
-  position:fixed;
+  position: fixed;
   top: 90%;
   right: 50px;
 }
@@ -73,13 +72,14 @@ body {
   right: 20px;
   z-index: 9999;
   font-size: 24px;
-  color: #EDF1D6;
+  color: #edf1d6;
   background-color: #40513b;
   padding: 15px;
   margin: 10px;
   border: solid #609966;
   border-radius: 50%;
   text-decoration: none;
+  margin-bottom: 10rem;
 }
 
 .btn {
@@ -90,32 +90,32 @@ body {
 }
 
 /* .btn-header {
-  margin: 0.5em 15% 2em 15%;
-  color: white;
-  border: 2px solid #2d9cdb;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 0;
-  font-size: 1.5em;
-  font-weight: lighter;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-.btn-header:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-} */
+    margin: 0.5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2d9cdb;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  
+  .btn-header:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  } */
 
 /* .btn-play {
-  display: block;
-  margin: 0 auto;
-  color: #2d9cdb;
-  font-size: 4em;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  padding: 0;
-  text-align: center;
-} */
+    display: block;
+    margin: 0 auto;
+    color: #2d9cdb;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+  } */
 
 .btn-primary {
   color: white;
@@ -130,37 +130,37 @@ body {
 }
 
 /* .tour-row {
-  border-bottom: 1px solid black;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-}
-
-.tour-row:last-child {
-  border: none;
-}
-
-.tour-item {
-  display: inline-block;
-  padding-right: 0.5em;
-}
-
-.tour-date {
-  color: #555;
-  width: 11%;
-  font-weight: bold;
-}
-
-.tour-city {
-  width: 24%;
-}
-
-.tour-arena {
-  width: 42%;
-}
-
-.tour-btn {
-  max-width: 19%;
-} */
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .tour-row:last-child {
+    border: none;
+  }
+  
+  .tour-item {
+    display: inline-block;
+    padding-right: 0.5em;
+  }
+  
+  .tour-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+  }
+  
+  .tour-city {
+    width: 24%;
+  }
+  
+  .tour-arena {
+    width: 42%;
+  }
+  
+  .tour-btn {
+    max-width: 19%;
+  } */
 
 .shop-item {
   margin: 30px;
@@ -180,11 +180,11 @@ body {
   border-radius: 10px;
 }
 
-.shop-item img{
+.shop-item img {
   height: 400px;
 }
 
-.shop-item img:hover{
+.shop-item img:hover {
   transform: scale(0.95);
 }
 
@@ -312,9 +312,9 @@ body {
   font-size: 1.75em;
 }
 
-#shopping-cart{
-  width:90vw;
-  margin:20px auto;
-  padding:20px;
-  border-radius:20px;
+#shopping-cart {
+  width: 90vw;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
 }
