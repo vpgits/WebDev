@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | The Cookbook</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+   >
+   <link rel="stylesheet"  href="/student_1/splash_screen/splash_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+   >
+   <link rel="icon" href="/media/icons/header.png" type="image/x-icon">
+</head>
+<body>
+ <!-- header -->
+ <header id="#top"> 
+    <div class="header-container" id="navbar">
+        <div class="header-icon">
+            <img id="headerImg" src="/media//icons/header.png" alt="icon">  
+            <a href="/index.html"><h1>The Cookbook</h1></a>   
+            <a  ><span rel="preload" class="material-symbols-outlined" id="hamburgMenu">menu</span></a> 
+        </div>
+        <div class="header-links" id="links" style="display: flex">
+            <a href="/index.html" >Home</a>
+            <a href="/student_1/products_page/products_page/products_page.html">Products</a>
+            <a href="/Student_4/Gallery.html">Gallery</a>
+            <a href="/student_3/Quiz Page/index.html" class="current">Quiz</a>
+            <a href="/Student_4/sitemap.html">Sitemap</a>
+            <a href="/student_3/About Us Page/About Us Page/Students Details.html">About Us</a>
+        </div>
+    </div>
+</header> 
+    <main>
+        
+        <div class="container" id="container">
+            <div class="card" id="welcomeCard">
+                <h2>Welcome</h2>
+                <p>We welcome you to The CookBook Quiz</p>
+                <br>
+                <br>
+                <ul>
+                    <li>The quiz is comprised of 10 questions</li>
+                    <li>You will have 2 minutes to answer all questions</li>
+                    <li>Each question will be awarded with 10 marks totalling 100 makrs</li>
+                </ul>
+                <br>
+                <button id="start" value="Start" name="Start">Start</button>
+            </div>
+            <div class="card" id="questionCard" style="display: none;">
+                <div class="timer">
+                    <strong><p id="timer">Timer</p></strong>
+                </div>
+                <h2 id="question">Placeholder Question</h2>
+                <br>
+                <div class="answer">
+                    <input type="radio" name="answer" id="answerOne" value="1">
+                    <label for="answerOne">Answer One</label>
+                    
+                </div>
+                <div class="answer">
+                    <input type="radio" name="answer" id="answerTwo" value="2">
+                    <label for="answerTwo">Answer Two</label>
+                    
+                </div>
+                <div class="answer">
+                    <input type="radio" name="answer" id="answerThree" value="3">
+                    <label for="answerThree">Answer Three</label>
+                </div>
+                <div class="answer">
+                    <input type="radio" name="answer" id="answerFour" value="4">
+                    <label for="answerFour">Answer Four</label>
+                </div>
+                <br>
+                <button id="next" value="next" onclick="checkAnswer()">Next</button>
+            </div>
+            <div class="card" id="scoreCard" style="display: none;">
+                <br><br><br><br>
+             <p>Well that was worth a shot</p>  <br> 
+             
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <img src="media/icons/header.png" alt="" height="150">
+            <div class="details">
+                <h2>The CookBook</h2>
+                <p>9 3/4,</p>
+                <p>Privet Drive</p>
+                <p>Colombo 07</p>
+                <p>Made by <a href="/student_3/About Us Page/About Us Page/Students Details.html#venura">Venura</a><a href="/additional_content/page editor.html"> &copy;</a> </p>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com"><img src="media/icons/facebook.png" alt=""></a>
+                <a href="https://web.whatsapp.com"><img src="media/icons/whatsapp.png" alt=""></a>
+                <a href="https://www.instagram.com"><img src="media/icons/instagram.png" alt=""></a>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

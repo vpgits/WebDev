@@ -4,6 +4,7 @@ Student Name: M.B.V.Pesanjith  */
 main{
     margin:20px auto;
     width: 70vw;
+
     
 }
 
@@ -21,4 +22,12 @@ p{
 
 main > a{
     color:#40513B
+}
+
+.post-card{
+    width:60vw;
+    margin:30px auto;
+    padding:20px;
+    border-radius:20px;
+    background-color: #F7FFE5;
 }
