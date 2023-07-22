@@ -159,14 +159,11 @@ const submitOne = document.getElementById("submitOne");
 const submitTwo = document.getElementById("submitTwo");
 
 async function validateAndSubmitOne(e) {
-
   const validFname = await validateName('fname', 'fname-container');
   const validStreetName = await validateName('street', 'street-container');
   const validCityName = await validateName('city', 'city-container');
   const validZip = await validateNumber('zip', 5, 'Invalid Zip Code');
   const validTele = await validateNumber('telephone', 10, 'Invalid Telephone Number');
-
-
   if (!(validFname && validStreetName && validCityName && validZip && validTele)) {
     e.preventDefault();
     alert("Please fill all fields. Hover to guide");
@@ -174,7 +171,6 @@ async function validateAndSubmitOne(e) {
 }
 
 async function validateAndSubmitTwo(e) {
-
   const validCname = await validateName('cname','cardname-container')
   const validEmail = await validateEmail();
   const validCardNum = await validateCreditCardNum();
