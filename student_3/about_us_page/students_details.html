@@ -5,11 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Style.css">
-    <link rel="icon" href="new logo@3x.png">
+    <link rel="icon" href="weblogo.png">
     <title>Student Details</title>
 </head>
 <body>
-   <main>
+     <!-- header -->
+     <header id="#top"> 
+        <div class="header-container" id="navbar">
+            <div class="header-icon">
+                <img id="headerImg" src="/media//icons/header.png" alt="icon">  
+                <a href="/index.html"><h1>The Cookbook</h1></a>   
+                <a  ><span rel="preload" class="material-symbols-outlined" id="hamburgMenu">menu</span></a> 
+            </div>
+            <div class="header-links" id="links" style="display: flex">
+                <a href="/index.html" class="current">Home</a>
+                <a href="/student_1/products_page/products_page.html">Products</a>
+                <a href="/Student_4/Gallery/Gallery.html">Gallery</a>
+                <a href="/student_3/quiz_page/quiz.html">Quiz</a>
+                <a href="/Student_4/Sitemap/sitemap.html">Sitemap</a>
+                <a href="/student_3/about_us_page/students_details.html">About Us</a>
+            </div>
+        </div>
+    </header>   
+    <!-- body -->
+    <main>
         <section class="Hero">
             <div class="about">
                 <h1>
@@ -23,7 +42,7 @@
             </div>
 
             <div>
-                <img src="new logo@3x.png" width="500px" height="500px">
+                <img src="/student_3/about_us_page/weblogo.png" width="400px" height="400px">
             </div>
         </section>
 
@@ -32,7 +51,7 @@
             <div class="container">
 
                 <div class="cards picture">
-                    <img src="/WebDev/student_3/About Us Page/About Us Page/Face Pics /bearded-young-man-wearing-shirt.png" alt="" width="150px" class="pic">
+                    <img src="/student_3/about_us_page/Face Pics /Heshan.png" alt="" width="300px" class="pic">
                     <h3>Heshan</h3>
                     <p>Web developer</p>
                 </div>
@@ -42,7 +61,7 @@
                     <p>Content Creator</p>
                 </div>
                 <div class="cards picture">
-                    <img src="/WebDev/student_3/About Us Page/About Us Page/Face Pics /red-haired-serious-young-man-blogger-looks-confidently.png" alt="" width="150px" class="pic">
+                    <img src="/student_3/about_us_page/Face Pics /Ayyoob.png" alt="" width="150px" class="pic">
                     <h3>Ayyoob</h3>
                     <p>UI/UX Desiner</p>
                 </div>
@@ -51,26 +70,31 @@
                     <h3>Kaveesha</h3>
                     <p>Graphic Desiner</p>
                 </div>
+            </div>
+        </main>
 
-            </div>
-
-        </section>
-        <section class="clientsection">
-            <div>
-                <h1 style="text-align: center">Our Clients</h1>
-            </div>
-            <div class="clients">
-                <div class="card">
-                    <img src="facebook.png" width="100px" height="100">
+            <!-- footer -->
+            <a href="#top" ><img src="/media/icons/icons8-scroll-up-100.png" alt="" id="toTop"></a> 
+            <footer>
+                <div class="footer-container">
+                    <img src="media/icons/header.png" alt="" height="150">
+                    <div class="details">
+                        <h2>The CookBook</h2>
+                        <p>9 3/4,</p>
+                        <p>Privet Drive</p>
+                        <p>Colombo 07</p>
+                        <p>Made by <a href="/student_2/page editor.html">Venura &copy;</a> </p>
+                    </div>
+                    <div class="icons">
+                        <a href="https://www.facebook.com"><img src="media/icons/facebook.png" alt=""></a>
+                        <a href="https://web.whatsapp.com"><img src="media/icons/whatsapp.png" alt=""></a>
+                        <a href="https://www.instagram.com"><img src="media/icons/instagram.png" alt=""></a>
+                        
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="search.png" width="100px" height="100">
-                </div>
-                <div class="card">
-                    <img src="twitter.png" width="100px" height="100">
-                </div>
+            </footer>
             </div>
-        </section>
-   </main>
+        <script src="script.js"></script>
+        <script src="index.js"></script>
 </body>
 </html>

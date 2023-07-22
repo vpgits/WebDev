@@ -1,6 +1,6 @@
 :root{
     --primary_color: #ff2400;
-    --secondary_color: #7028ff;
+    --secondary_color: #609966;
     --background_color:#fcfcfc;
     --White_color: white;
     --Black_color: #000000;
@@ -51,13 +51,13 @@ p {
 }
 
 .about {
-    padding:0px 250px ;
+    padding:0px 100px ;
 }
 
 .Hero img {
     margin: 0px 100px;
     position: relative;
-    left: -100px;
+    left: 30px;
 }
 
 /* profile section */
@@ -96,7 +96,7 @@ p {
 
     position: relative;
     top:-100px;
-    right: -25px;
+    right: -60px;
 
     width: auto;
     height: 200px;
@@ -131,34 +131,4 @@ p {
 
 .cards p{
     color: var(--secondary_color);
-}
-
-/* clients section  */
-
-.clientsection{   
-    background-color:#e4e4e4;
-    width: 100%;
-    height: 50vh;
-  
-}
-.clientsection h1{
-    font-size: 3rem;
-    padding: 80px;
-    color: rgb(33, 33, 33);
-}
-
-.clientsection .clients {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.clients .card{
-    padding: 20px 200px;
-
-}
-
-.clients .card img:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease 0s;
 }
