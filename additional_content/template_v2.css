@@ -1,0 +1,41 @@
+/* student role: student 1
+   student name: Heshan Wanigasinghe */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-title h1{
+    margin: rem 0 0 0;
+    background-color: #40513B;
+    color: white;
+
+}
+
+.item {
+    background-color: #40513B;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 2rem;
+    border-radius: 1rem;
+}
+
+.item img {
+    padding: 1rem;
+    border: rgb(237, 241, 214) 1px solid;
+    width: 150px;
+    height: auto; 
+    margin-right: 20px;
+}
+
+.item img:hover {
+    transform: scale(0.95) ;
+}
+
+.item p{
+    font-size: larger;
+    color: white;
+}
