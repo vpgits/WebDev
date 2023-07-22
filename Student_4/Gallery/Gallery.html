@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="Gallery.css">
+    <link rel="stylesheet" href="imageSection2.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header -->
+    <header id="#top"> 
+        <div class="header-container" id="navbar">
+            <div class="header-icon">
+                <img id="headerImg" src="img/header.png" alt="icon">   
+                <h1>The Cookbook</h1>
+                <a  ><span rel="preload" class="material-symbols-outlined" id="hamburgMenu">menu</span></a> 
+            </div>
+            <div class="header-links" id="links" style="display: flex">
+                <a href="/index.html" >Home</a>
+                <a href="/student_1/products_page/products_page/products_page.html">Products</a>
+                <a href="/Student_4/Gallery.html">Gallery</a>
+                <a href="/student_3/Quiz Page/index.html">Quiz</a>
+                <a href="/Student_4/sitemap.html">Sitemap</a>
+                <a href="/student_3/About Us Page/About Us Page/Students Details.html">AboutUs</a>
+            </div>
+        </div>
+    </header> 
+    <a href="#top" ><img src="img/icons8-scroll-up-100.png" alt="" id="toTop"></a>
+    
+
+    <div class="bigimage">
+        <div class="headline">
+            <h1>GALLERY</h1>
+            Welcome to the gallery of the CookBook
+        </div>
+    </div>
+
+    <div class="link">
+        <a href="#product"><button class="li" style="margin-right:20px;">Our Products</button></a>
+        <a href="#Sri"><button class="li">Sri Lankan meals</button></a>
+    </div>
+
+
+    <div class="floating-button">
+        <button class="bot" onclick="toggleButtons()">+</button>
+        <div id="buttonContainer" class="button-container">
+            <div class="font-sizes">
+                <button id="small">A</button>
+                <button id="medium">A</button>
+                <button id="large">A</button>
+            </div>
+          <button class="item item1" onclick="color(this.value)" value="#EDF1D6" style="background-color:#EDF1D6"></button>
+          <button class="item item2" onclick="color(this.value)" value="#121212" style="background-color:#121212"></button>
+          <button class="item item3" onclick="color(this.value)" value="#9DC08B" style="background-color:#9DC08B"></button>
+          <button class="item item4" onclick="color(this.value)" value="#FFFFFF" style="background-color:#FFFFFF"></button>
+          <button class="item item5" onclick="getNewColor()" style="background-image: url(img/1img.jpg);">R</button>
+        </div>
+      </div>
+
+      <h2 style="text-align: center;padding-top: 150px">HEALTHY FOODS</h2>
+      <div class="main-scroll-div" style="height:400px ;">
+        <div class="cover" >
+            <div class="scroll-container">
+            <div class="scroll-images">
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/brooke-lark-aGjP08-HbYY-unsplash.jpg" alt="" class="size  image1">
+                    <img class="large-image" src="img/brooke-lark-aGjP08-HbYY-unsplash.jpg" alt="large image">
+                    <div class="intro">
+                        <p>Blueberries contain good amounts of fiber, vitamin C, and antioxidant anthocyanins.
+                             Strawberries are an excellent source of vitamin C. They may help reduce risk factors for heart
+                            disease and control blood sugar.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/brooke-lark-nBtmglfY0HU-unsplash.jpg" alt="" class="size image1" style="height:310px">
+                     <img class="large-image" src="img/brooke-lark-nBtmglfY0HU-unsplash.jpg" alt="large image">
+                     <div class="intro">
+                        <p>fruits and milk, packed with essential nutrients that support your overall health. 
+                            Fruits, bursting with vitamins, minerals, and antioxidants, provide a natural boost to your immune system.
+                            milk, a nutritional powerhouse, is a key source of calcium, vital for strong bones and teeth.
+                             Its high-quality protein supports muscle growth and repair.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+
+                 <div class="child">
+                    <div class="gallery">
+                    <img src="img/brooke-lark-W9OKrxBqiZA-unsplash.jpg" alt=""  class="size image1" style="height:310px">
+                     <img class="large-image" src="img/brooke-lark-W9OKrxBqiZA-unsplash.jpg" alt="large image">
+                     <div class="intro">
+                        <p>fruits and milk, packed with essential nutrients that support your overall health. 
+                            Fruits, bursting with vitamins, minerals, and antioxidants, provide a natural boost to your immune system.
+                            milk, a nutritional powerhouse, is a key source of calcium, vital for strong bones and teeth.
+                             Its high-quality protein supports muscle growth and repair.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/ellie-ellien-3Tk0EfrcuOs-unsplash.jpg" alt=""  class="size image1">
+                     <img class="large-image" src="img/ellie-ellien-3Tk0EfrcuOs-unsplash.jpg" alt="large image">
+                     <div class="intro">
+                        <p>Pairing fruits with nutrient-rich oats creates a powerful duo for your well-being. 
+                            Oats are a great source of complex carbohydrates and fiber, promoting a feeling of fullness and aiding in weight management.  
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/heather-ford-teuvnOXOGVo-unsplash.jpg" alt="" class="size image1">
+                     <img class="large-image" src="img/heather-ford-teuvnOXOGVo-unsplash.jpg" alt="large image">
+                     <div class="intro">
+                        <p>fruits with wholesome bread adds a nutritious touch to your diet.
+                            Whole-grain breads are rich in complex carbohydrates, fiber, and essential nutrients like B vitamins and iron. 
+                            Omelets, made with eggs, offer high-quality protein, essential amino acids.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/joao-marcelo-martins-pDC7vQrW-EM-unsplash.jpg" alt="" class="size image1">
+                     <img class="large-image" src="img/joao-marcelo-martins-pDC7vQrW-EM-unsplash.jpg" alt="large image">
+                     <div class="intro">
+                        <p> 
+                             Tea, whether green, black, or herbal, is rich in antioxidants like catechins and flavonoids, which help combat oxidative stress and inflammation.
+                            fruits with wholesome bread adds a nutritious touch to your diet.
+                            Whole-grain breads are rich in complex carbohydrates, fiber, and essential nutrients like B vitamins and iron.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-button left" onclick="scrolll()">
+                <span>&#8249;</span>
+            </div>
+            <div class="scroll-button right" onclick="scrollr()">
+                <span>&#8250;</span>
+            </div>
+            </div>
+        </div>
+      
+    </div>
+
+
+    <h2 style="text-align: center; padding-top: 100px;" id="Sri" >Sri Lankan Foods</h2>
+
+    <div class="main-scroll-div" style="height:400px ;">
+        <div class="cover" >
+            <div class="scroll-container">
+            <div class="scroll-img">
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/rice-6297410.jpg" alt="" class="size  image1">
+                    <img class="large-image" src="img/rice-6297410.jpg" alt="large image">
+                    <div class="intro">
+                        <p>Sri Lankan cooking has evolved around rice. The national meal is not referred to as “curry” but as “rice and curry”: 
+                            a mountainous plate of rice generally accompanied by assorted meat and/or vegetable curries, various pickles, sambols, and a handful of tiny poppadums. 
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/kottu-6319357.jpg" alt="" class="size image1" style="height:310px">
+                     <img class="large-image" src="img/kottu-6319357.jpg" alt="large image">
+                     <div class="intro">
+                        <p>Kottu translates from Sinhalese as chopped,
+                             and this hugely popular Sri Lankan street food consists of chopped up roti (a type of flatbread), 
+                             stir-fried with chicken, vegetables and egg..
+                        </p>
+                    </div>
+                    </div>
+                </div>
+
+                 <div class="child">
+                    <div class="gallery">
+                    <img src="img/cassava-6247127.jpg" alt=""  class="size image1" style="height:310px">
+                     <img class="large-image" src="img/cassava-6247127.jpg" alt="large image">
+                     <div class="intro">
+                        <p>“Magngnokka” or “Manyokka” in Sinhalese (Cassava) is a well-known edible root (once cooked) in Sri Lanka.
+                             Cassava is like a mine of essential energy for our cellular work in the body as it is so much enriched with carbohydrates. 
+                            This is not only popular in Sri Lanka but also around most of the regions in the world.  
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/amirali-mirhashemian-ZSukCSw5VV4-unsplash.jpg" alt="" class="size image1" style="height: 320px;">
+                     <img class="large-image" src="img/amirali-mirhashemian-ZSukCSw5VV4-unsplash.jpg" alt="large image">
+                     <div class="intro">
+                        <p>Pol roti  in Sinhalese translates to coconut roti, or coconut flatbread.
+                             It is a very popular type of flatbread made in Sri Lanka.
+                             It can be eaten for breakfast, lunch, dinner or even as a snack throughout the day. 
+                            It is super versatile!
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/parippu-vada-6305691.jpg" alt="" class="size image1">
+                     <img class="large-image" src="img/parippu-vada-6305691.jpg" alt="large image">
+                     <div class="intro">
+                        <p>Vada is a savoury fried snack, with origins from India.
+                            Parippu vade and Uludu vade are popular street food and tea time snack.
+
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="child">
+                    <div class="gallery">
+                    <img src="img/manoj-malshan-KdRvb2rFT3w-unsplash.jpg" alt="" class="size image1">
+                     <img class="large-image" src="img/manoj-malshan-KdRvb2rFT3w-unsplash.jpg" alt="large image">
+                     <div class="intro">
+                        <p>As mentioned earlier, Kavum is a deep-fried sweet made from rice flour and treacle,
+                             often with the addition of sesame seeds or coconut pieces. 
+                            Kokis, is a crispy and intricately shaped snack prepared from rice flour and coconut milk. 
+                            Its crunchy texture and attractive appearance make it a favorite among all age groups.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-button left" onclick="scroll1()">
+                <span>&#8249;</span>
+            </div>
+            <div class="scroll-button right" onclick="scroll2()">
+                <span>&#8250;</span>
+            </div>
+            </div>
+        </div>
+      
+    </div>
+
+    
+    <h2 id="product" style="text-align: center; padding-top:100px;">OUR PRODUCT</h2>
+   
+    <div class="container">
+        <div class="box">
+        <div class="main">
+            <div class="gallery">
+            <div>    
+            <img class="image1" src="img/jason-briscoe-PkkLkjJdUZw-unsplash.jpg"  alt="" data-large="img/jason-briscoe-PkkLkjJdUZw-unsplash.jpg">
+            <img class="large-image" src="img/jason-briscoe-PkkLkjJdUZw-unsplash.jpg" alt="large image" style="width:250px;height: 400px;">
+            </div>
+            <div class="intro">
+                <p>Aluminum cooking wares and plates are kitchen items made from aluminum,
+                     a lightweight metal that has excellent heat conductivity. 
+                </p>
+            </div>
+            </div>
+
+            <div class="gallery">
+            <img class="image1" src="img/janko-ferlic-KwU5Cl0LSXs-unsplash.jpg" alt="" >
+            <img class="large-image"  src="img/janko-ferlic-KwU5Cl0LSXs-unsplash.jpg" alt="" style="width:500px;height: 350px;">
+            <div class="intro">
+                <p>Aluminum is one of the best conductors of heat, ensuring that your food cooks or bakes evenly and efficiently.
+                    Aluminum is much lighter than other common cooking materials like cast iron or stainless steel, making it easier to handle and maneuver in the kitchen.
+                </p>
+            </div>
+            </div>
+
+            <div class="gallery">
+            <img class="image1" src="img/danilo-rios-z9AormQ0e90-unsplash.jpg" alt="" >
+            <img class="large-image"  src="img/danilo-rios-z9AormQ0e90-unsplash.jpg" alt="" style="width:500px;height: 350px;">
+            <div class="intro">
+                <p>When choosing kitchen knives, it's essential to consider the quality of the blade material (usually stainless steel or carbon steel), handle comfort and grip, and the knife's balance. 
+                
+                </p>
+            </div>
+            </div>
+            <div class="gallery">
+            <img  class="image1" src="img/dane-deaner-wkC8EX8y9Mc-unsplash.jpg" alt="" >
+            <img class="large-image"  src="img/dane-deaner-wkC8EX8y9Mc-unsplash.jpg"  alt="" style="width:500px;height: 350px;">
+            <div class="intro">
+                <p>Aluminum is one of the best conductors of heat, ensuring that your food cooks or bakes evenly and efficiently.
+                    Aluminum is much lighter than other common cooking materials like cast iron or stainless steel, making it easier to handle and maneuver in the kitchen.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="gallery">
+            <img class="image1" src="img/marcin-galusz-Xq0lte4P7rQ-unsplash.jpg" alt="" >
+            <img class="large-image"  src="img/marcin-galusz-Xq0lte4P7rQ-unsplash.jpg" alt="" style="width:500px;height: 350px;">
+            <div class="intro">
+                <p>Aluminum cookware and plates are generally more budget-friendly compared to other materials like copper or high-quality stainless steel.
+                    Aluminum heats up quickly and cools down rapidly once removed from the heat source, allowing for responsive cooking adjustments.
+                </p>
+            </div>
+            </div>
+
+            <div class="gallery">
+            <img class="image1" src="img/calum-lewis-rkT_TG5NKF8-unsplash.jpg" alt="" >
+            <img class="large-image"  src="img/calum-lewis-rkT_TG5NKF8-unsplash.jpg" alt="" style="width:250px;height: 400px;">
+            <div class="intro">
+                <p>Aluminum spoons are typically made from lightweight and durable aluminum metal.
+                    Wooden spoons are kitchen utensils made from various types of wood, such as beechwood, olive wood, or bamboo.
+                </p>
+            </div>
+            </div>
+
+
+            <div class="gallery">
+            <img class="image1" src="img/jan-antonin-kolar-bEcg2Wmi7wI-unsplash.jpg" alt="" >
+            <img class="large-image"  src="img/jan-antonin-kolar-bEcg2Wmi7wI-unsplash.jpg" alt=""  style="width:250px;height: 400px;">
+            <div class="intro">
+                <p>This place has Golden sandy shore and rich bio diversity backgrounds and suitable for swimming without waves. 
+                    The beach is rich with coral reefs and marine biology. 
+                </p>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <div class="gallery">
+            <img class="image1" src="img/icons8-team-seDjj4dmC9s-unsplash.jpg" alt="" >
+            <img class="large-image"  src="img/icons8-team-seDjj4dmC9s-unsplash.jpg" alt="" style="width:500px;height: 350px;">
+            <div class="intro">
+                <p>The non-stick coating is usually made of a synthetic polymer, such as polytetrafluoroethylene (PTFE), commonly known by the brand name Teflon.
+                     This coating creates a smooth and slippery surface, making it easier to cook delicate foods like eggs, pancakes, and fish without them sticking to the pan.
+                </p>
+            </div>
+            </div>
+
+            <div class="gallery">
+            <img class="image1" src="img/nathan-dumlao-3Tm2oJp6AQY-unsplash.jpg" alt="">
+            <img class="large-image"  src="img/nathan-dumlao-3Tm2oJp6AQY-unsplash.jpg" alt="" style="width:250px;height: 400px;">
+            <div class="intro">
+                <p>This place has Golden sandy shore and rich bio diversity backgrounds and suitable for swimming without waves. 
+                    The beach is rich with coral reefs and marine biology. 
+                </p>
+            </div>
+            </div>
+
+            <div class="gallery">
+            <img class="image1" src="img/vladimir-gladkov-d1hKXgFJUKw-unsplash.jpg" alt="">
+            <img class="large-image"  src="img/vladimir-gladkov-d1hKXgFJUKw-unsplash.jpg" alt="" style="width:500px;height: 350px;">
+            <div class="intro">
+                
+                <p>Porcelain plates are ceramic plates made from fine clay fired at high temperatures. 
+                    When using porcelain plates, it's essential to handle them with care to avoid chipping or breaking.
+                    Wood cutting boards are popular kitchen tools used for chopping, slicing, and preparing food.
+                </p>
+            </div>
+            </div>
+
+            <div class="gallery">
+            <img class="image1" src="img/todd-quackenbush-x5SRhkFajrA-unsplash (1).jpg" alt="">
+            <img class="large-image"  src="img/todd-quackenbush-x5SRhkFajrA-unsplash (1).jpg" alt="" style="width:500px;height: 350px;">
+            <div class="intro">
+                <p>Wood cutting boards are popular kitchen tools used for chopping, slicing, and preparing food.
+                     They are made from various types of wood, such as maple, walnut, cherry, bamboo, and more. 
+                </p>
+            </div>
+            </div>
+           
+        </div>
+        
+        </div>
+    </div>
+    <!-- footer -->
+    <footer style="height: 150px;">
+        <div class="footer-container" >
+            <img src="img/header.png" alt="" height="150">
+            <div class="details">
+                <h2>The CookBook</h2>
+                9 3/4,<br>
+                Privet Drive,<br>
+                Colombo 07<br>
+                Editor of the page:<a href="editor.html"><u>Kaveesha Jayasingha</u></a>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com"><img src="img/facebook.png" alt=""></a>
+                <a href="https://web.whatsapp.com"><img src="img/whatsapp.png" alt=""></a>
+                <a href="https://www.instagram.com"><img src="img/instagram.png" alt=""></a>
+                
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="Gallery.js"></script>
+    <script src="Gallery1.js"></script>
+    <script>
+        const scrollContainer = document.querySelector(".scroll-container");
+        const scrollAmount = 300; 
+        
+        function scrollLeft() {
+        scrollContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: "smooth",
+                });
+         }
+        
+        function scrollRight() {
+            scrollContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: "smooth",
+            });
+        }
+        
+    </script>
+</body>
+</html>
