@@ -48,14 +48,14 @@ function informUser(){
             textArea.classList.add("invalid");
             textArea.append("Please enter a reason");
         }
+        alert("Please fill the form");
     })
-
 }
 
 informUser();
 
 
-
+//sends an email when the input is valid and redirects the user abck to the home page
 submit.addEventListener('click', (e)=>{
     if (slider.classList.contains('valid') && textArea.classList.contains('valid')) {
       const link = document.createElement('a')  ;

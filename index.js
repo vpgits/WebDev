@@ -43,11 +43,6 @@ function switchSlides(n, classname) {
       }
 
       dynamicSlides();
-    // if (n === 10){
-    //   let element  = document.getElementById(".stage-active");
-
-    // }
-
 }
 
 //custom function to change visible number of slides

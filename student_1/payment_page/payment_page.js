@@ -186,14 +186,6 @@ async function validateAndSubmitTwo(e) {
 submitOne.addEventListener('click', validateAndSubmitOne);
 submitTwo.addEventListener('click',validateAndSubmitTwo )
 
-//validates form One
-
-
-//validates form Two
-function validateFormTwo() {
-  
-
-}
 
 //disables form One and inserts form two
 function switchFormsOne() {

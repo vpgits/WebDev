@@ -41,9 +41,6 @@ function timer(){
             timer.innerText = temp.slice(0,2)+String(Number(temp.slice(2,4))-1);
         }
         },1000);
-
-
-
 }
 
 function handleTime(time){
@@ -58,6 +55,7 @@ function handleTime(time){
         time = time.slice(0,3)+String(Number(time.slice(3,5))-1);
     }
 }
+
 let counter=0;
 let mark=0;
 let isCounterOver=false;
@@ -77,11 +75,10 @@ function flipCards(){
         isCounterOver=true;
     }
 }
+
 let choosenAnswer;
 function checkAnswer(){
-
     const answersList = document.querySelectorAll(".answer");
-
     for (let i=0; i<4;i++){
         const element = answersList[i];
         if(element.querySelector("input").checked){

@@ -11,7 +11,7 @@ p {
 }
 
 body {
-  margin-top: 93px;
+  margin-top: 110px;
   background-color: #edf1d6;
   display: flex;
   flex-direction: column; 
@@ -169,10 +169,10 @@ input[type="number"] {
 
 
 
-footer {
+/* footer {
   position: relative;
   width: 100%;
-}
+} */
 
 /*
 dont know */

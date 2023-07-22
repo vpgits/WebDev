@@ -1,16 +1,16 @@
 /* Student Role: student_2
 Student Name: M.B.V.Pesanjith  */
-
+/* 
 *{
     margin:0;
     padding:0;
-}
+} */
 
 form{
     color:black;
     font-weight:400;
     font-size:20px;
-    margin-top:150px;
+    margin-top:60px;
 }
 
 label{
@@ -104,4 +104,7 @@ input[type=submit]:hover{
     border-color: red; */
     color:red;
 }
-
+main{
+    padding-top:1px;
+    margin-bottom:30px;
+}
