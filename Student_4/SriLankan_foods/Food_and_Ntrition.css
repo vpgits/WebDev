@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Lora','serif';
+}
+body{
+    transition: all 1.5s ease;
+ 
+}
+.pyramid{
+    height:200px;
+    width:300px;
+    float:left;
+    padding:00px 0px 0px 00px;
+   
+}
+.two{
+    height:200px;
+    width:300px;
+    float:right;
+}
+.SLfood{
+    margin:60px;
+    background-color:#9DC08B;
+    border: solid #9DC08B 5px;
+    border-radius: 10px;
+    padding-bottom:50px
+}
+
+.bigimage{
+    width:100%;
+    height:600px;
+    position:relative;
+    background-image: url(nilantha-sanjeewa-EXHIHvJu4VU-unsplash.jpg);
+    background-size:cover ;
+}
+.headline{
+    width:100%;
+    height:100%;
+    font-size: 26px;
+    color:white;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.gallery{
+    position: relative;
+    padding:20px 10px 50px 10px;
+  }
+  
+.container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+.gallery .large-image {
+    position:absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    opacity: 0;
+} 
+    
+    
+.gallery:hover .large-image {
+    position: fixed;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 40%;
+    width: 550px;
+    z-index: 15;
+}
+    
+    
+.des{
+    margin: 20px 0 0 520px;
+    right: 30px;
+    top: 0;
+    opacity: 1;
+    text-align: left;
+}
+    
+.intro{
+      height: 400px;
+      width: 800px;
+      padding: 30px ;
+      border-radius: 5px;
+      position: fixed;
+      margin-left: 0;
+      bottom: 0;
+      top:5%;
+      right: -5000px;
+      transition: 1s;
+      background:rgb(27,27,27, .7);
+      color: white;
+      visibility: hidden;
+}
+    
+      
+.gallery:hover .intro{
+          
+    visibility: visible;
+    left: 20%;
+    top: 20%;
+    position: fixed;
+    z-index: 10;
+    border: 1px solid black;
+ }
+       
+      
+.gallery:hover p{
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1.1 );
+      transition: 1s;
+      
+}
+      
+.gallery:hover {
+    margin-bottom: 400px; /* add margin to create space */      
+}
+      
+.gallery:not(:active) + .gallery {  /* increase top of next line of images */
+      
+      top: calc(0 + 0 + 250px); /* height + margin + hovering image height */
+}
