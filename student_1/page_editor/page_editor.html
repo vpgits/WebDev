@@ -1,17 +1,33 @@
+<!-- Student Role: student 1
+     Student Name: Heshan Wanigasinghe -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>page editor</title>
-    <link rel="stylesheet" href="products_page.css" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="products_page.css">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      fieldset {
+        margin-top: -1500px;
+        width: 80vw;
+        margin: 0 auto;
+      }
+      filedset p {
+        padding: 10px;
+      }
+      fieldset a {
+        color: rgb(120, 21, 120);
+      }
+    </style>
   </head>
   <body>
     <header id="#top">
       <div class="header-container" id="navbar">
         <div class="header-icon">
-          <img id="headerImg" src="/media//icons/header.png" alt="icon" />
+          <img id="headerImg" src="/media//icons/header.png" alt="icon">
           <h1>The Cookbook</h1>
           <a
             ><span
@@ -24,9 +40,7 @@
         </div>
         <div class="header-links" id="links" style="display: flex">
           <a href="/index.html">Home</a>
-          <a href="/student_1/products_page/products_page.html" class="current"
-            >Products</a
-          >
+          <a href="/student_1/products_page/products_page.html">Products</a>
           <a href="/Student_4/Gallery/Gallery.html">Gallery</a>
           <a href="/student_3/quiz_page/quiz.html">Quiz</a>
           <a href="/Student_4/Sitemap/sitemap.html">Sitemap</a>
@@ -34,39 +48,107 @@
         </div>
       </div>
     </header>
-    <div id="scroll-to-top">
-      <a id="top"></a>
-      <a href="#top" class="scroll-to-top">&#9650;</a>
-    </div>
 
-    
-
-
+    <main
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      "
+    >
+      <fieldset>
+        <br>
+        <h1>Heshan Wanigasinghe</h1>
+        <br>
+        <h2>Student 1</h2>
+        <br>
+        <h3>IIT ID : 20221967&nbsp;&nbsp;&nbsp;&nbsp;UOW ID : W1985501</h3>
+        <br>
+        <strong>Presentation Page</strong>
+        <ul>
+          <li>
+            Added the website name along with the team member names and a
+            background video as well using HTML.
+          </li>
+          <li>
+            Added styling to the text and background video as well as created a
+            "loading animation" using CSS.
+          </li>
+          <li>
+            Added a 4 second timer to the presentation page and made sure it
+            redirects to the home page finally by using Javascript.
+          </li>
+        </ul>
+        <a href="/student_1/splash_screen/splash_screen.html"
+          >link to presentation page</a
+        ><br><br>
+        <strong>Buy Products Page</strong>
+        <ul>
+          <li>
+            Added product descriptions, product images, shopping cart and
+            checkout page using HTML.
+          </li>
+          <li>
+            Added Styling(eg:colors and sizing) to the products, shopping cart
+            and checkout page.
+          </li>
+          <li>
+            Added functionality to the buy products page and checkout page using
+            Javascript.
+          </li>
+        </ul>
+        <a href="/student_1/products_page/products_page.html"
+          >link to buy products page</a
+        ><br><br>
+        <strong>Additional Content Page (Italian Cuisine)</strong>
+        <ul>
+          <li>
+            Added images and descriptions as well as links to the mentioned
+            foods using HTML.
+          </li>
+          <li>Added basic styling using CSS</li>
+        </ul>
+        <a href="/student_1/additional_content/italian.html"
+          >link to the additional content page</a
+        ><br><br>
+        <strong>Page editor</strong>
+        <a href="/student_1/page_editor/page_editor.html"
+          >link to page editor</a
+        >
+        <br>
+      </fieldset>
+      <br>
+    </main>
 
     <footer>
-        <div class="footer-container">
-          <img src="/media/icons/header.png" alt="" height="150">
-          <div class="details">
-            <h2>The CookBook</h2>
-            <p>9 3/4,</p>
-            <p>Privet Drive</p>
-            <p>Colombo 07</p>
-          </div>
-          <div class="icons">
-            <a href="https://www.facebook.com"
-              ><img src="/media/icons/facebook.png" alt=""
-           ></a>
-            <a href="https://web.whatsapp.com"
-              ><img src="/media/icons/whatsapp.png" alt=""
-           ></a>
-            <a href="https://www.instagram.com"
-              ><img src="/media/icons/instagram.png" alt=""
-           ></a>
-          </div>
+      <div class="footer-container">
+        <img src="/media/icons/header.png" alt="icon" height="150">
+        <div class="details">
+          <h2>The CookBook</h2>
+          <p>9 3/4,</p>
+          <p>Privet Drive</p>
+          <p>Colombo 07</p>
+          <p>
+            Editor of the page :
+            <a href="/student_1/page_editor/page_editor.html"
+              ><u>Heshan Wanigasinghe</u></a
+            >
+          </p>
         </div>
-      </footer>
-      <script src="/script.js"></script>
-      <script src="products_page.js"></script>
-      <script src="/script.js"></script>
+        <div class="icons">
+          <a href="https://www.facebook.com"
+            ><img src="/media/icons/facebook.png" alt=""
+         ></a>
+          <a href="https://web.whatsapp.com"
+            ><img src="/media/icons/whatsapp.png" alt=""
+         ></a>
+          <a href="https://www.instagram.com"
+            ><img src="/media/icons/instagram.png" alt=""
+         ></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
