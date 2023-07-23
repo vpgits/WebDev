@@ -1,57 +1,53 @@
 // Student Role: student_2
-// Student Name: M.B.V.Pesanjith 
-
-
-
+// Student Name: M.B.V.Pesanjith
 
 //creates a warning element to be appended to the DOM
 const warning = document.createElement("p");
 warning.classList.add("warning");
 
 //loads data via the localstorage API and disables input on elements of the retrived element
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener("DOMContentLoaded", () => {
   let cart = window.localStorage.getItem("cart");
 
-  cart = cart.replace('<button class="btn btn-primary btn-ProceedToCheckout" type="button">Proceed To Checkout</button>', "");
-
+  cart = cart.replace(
+    '<button class="btn btn-primary btn-ProceedToCheckout" type="button">Proceed To Checkout</button>',
+    ""
+  );
 
   let cartCard = document.querySelector(".cartCard");
   cartCard.innerHTML = cart;
-  var inputElements = cartCard.querySelectorAll('input');
-for (var i = 0; i < inputElements.length; i++) {
+  var inputElements = cartCard.querySelectorAll("input");
+  for (var i = 0; i < inputElements.length; i++) {
     inputElements[i].readOnly = true;
-}
-})
+  }
+});
 
 //checks if the name is valid in form one and two
 
-
 function validateName(inputelement, parentelement) {
-    let element = document.getElementById(inputelement);
-    const text = element.value;
-    const warningText = document.querySelector(".warning." + inputelement);
-    const parentElement = document.getElementById(parentelement);
-    warning.classList.add(inputelement);
-    var regex = /^[A-Za-z\s]+$/;
-    if (warningText === null) {
-      parentElement.appendChild(warning);
+  let element = document.getElementById(inputelement);
+  const text = element.value;
+  const warningText = document.querySelector(".warning." + inputelement);
+  const parentElement = document.getElementById(parentelement);
+  warning.classList.add(inputelement);
+  var regex = /^[A-Za-z\s]+$/;
+  if (warningText === null) {
+    parentElement.appendChild(warning);
+  } else {
+    warning.textContent = null;
+    if (!regex.test(text)) {
+      warningText.textContent = "Should exclude symbols and numbers";
+      return false;
     } else {
-      warning.textContent = null;
-        if (!regex.test(text)) {
-          warningText.textContent = "Should exclude symbols and numbers";
-          return false;
-        } else {
-          parentElement.removeChild(warning);
-          return true;
-        }
+      parentElement.removeChild(warning);
+      return true;
     }
+  }
 }
 
 //validates the  numbers
 
-
-function validateNumber(inputelement,length,warningmsg) {
-
+function validateNumber(inputelement, length, warningmsg) {
   let element = document.getElementById(inputelement);
   const warningText = document.querySelector(`.warning.${inputelement}`);
   const parentElement = element.parentNode;
@@ -62,7 +58,7 @@ function validateNumber(inputelement,length,warningmsg) {
     warning.textContent = null;
     if (element.value.length != 0) {
       if (element.value.length != length) {
-        warningText.textContent = warningmsg
+        warningText.textContent = warningmsg;
         return false;
       } else if (element.value.length === length) {
         parentElement.removeChild(warning);
@@ -70,7 +66,6 @@ function validateNumber(inputelement,length,warningmsg) {
       }
     }
   }
-;
 }
 
 //validates the email
@@ -118,16 +113,14 @@ function validateCreditCardNum() {
         warningText.textContent = "A valid card number must have 16 digits";
       } else if (num.value.length === 19) {
         parentElement.removeChild(warning);
-        return  true;
+        return true;
       }
     } else {
       warningText.textContent = "Enter digits";
       return false;
     }
   }
-
 }
-
 
 function validateExpiryDate() {
   const date = document.getElementById("expiry-date");
@@ -159,40 +152,50 @@ const submitOne = document.getElementById("submitOne");
 const submitTwo = document.getElementById("submitTwo");
 
 async function validateAndSubmitOne(e) {
-  const validFname = await validateName('fname', 'fname-container');
-  const validStreetName = await validateName('street', 'street-container');
-  const validCityName = await validateName('city', 'city-container');
-  const validZip = await validateNumber('zip', 5, 'Invalid Zip Code');
-  const validTele = await validateNumber('telephone', 10, 'Invalid Telephone Number');
-  if (!(validFname && validStreetName && validCityName && validZip && validTele)) {
+  const validFname = await validateName("fname", "fname-container");
+  const validStreetName = await validateName("street", "street-container");
+  const validCityName = await validateName("city", "city-container");
+  const validZip = await validateNumber("zip", 5, "Invalid Zip Code");
+  const validTele = await validateNumber(
+    "telephone",
+    10,
+    "Invalid Telephone Number"
+  );
+
+  if (
+    !(validFname && validStreetName && validCityName && validZip && validTele)
+  ) {
     e.preventDefault();
     alert("Please fill all fields. Hover to guide");
   }
 }
 
 async function validateAndSubmitTwo(e) {
-  const validCname = await validateName('cname','cardname-container')
+  const validCname = await validateName("cname", "cardname-container");
   const validEmail = await validateEmail();
   const validCardNum = await validateCreditCardNum();
   const validExpDate = await validateExpiryDate();
-  const validCSV = await validateNumber('csv',3,'Invalid CSV');
+  const validCSV = await validateNumber("csv", 3, "Invalid CSV");
   if (!(validCname && validEmail && validCardNum && validExpDate && validCSV)) {
     e.preventDefault();
     alert("Please fill all fields. Hover to guide");
   }
 }
 
+submitOne.addEventListener("click", validateAndSubmitOne);
+submitTwo.addEventListener("click", validateAndSubmitTwo);
 
-submitOne.addEventListener('click', validateAndSubmitOne);
-submitTwo.addEventListener('click',validateAndSubmitTwo )
+//validates form One
 
+//validates form Two
+function validateFormTwo() {}
 
 //disables form One and inserts form two
 function switchFormsOne() {
   document.querySelectorAll(".formOne").forEach((element) => {
     element.style.display = "none";
   });
-  document.getElementById("payment-details").style.display="block";
+  document.getElementById("payment-details").style.display = "block";
   const formElements = document
     .getElementById("user-details")
     .getElementsByTagName("input");
@@ -206,7 +209,5 @@ function switchFormsTwo() {
   // let output;
   // output = validCard && cardName && validEmail && validExpDate;
 
-
-    window.location.href = "/student_2/feedback_form/comments.html";
-
+  window.location.href = "/student_2/feedback_form/comments.html";
 }

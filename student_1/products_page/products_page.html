@@ -2,47 +2,57 @@
 <!--Student Name: Heshan Wanigasinghe-->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Products page</title>
-    <link rel="stylesheet" href="products_page.css" />
+    <link rel="stylesheet" href="products_page.css">
     <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <header id="#top"> 
+    <header id="#top">
       <div class="header-container" id="navbar">
-          <div class="header-icon">
-              <img id="headerImg" src="/media//icons/header.png" alt="icon">  
-              <a href="/index.html"><h1>The Cookbook</h1></a>   
-              <a  ><span rel="preload" class="material-symbols-outlined" id="hamburgMenu">menu</span></a> 
-          </div>
-          <div class="header-links" id="links" style="display: flex">
-              <a href="/index.html" >Home</a>
-              <a href="/student_1/products_page/products_page.html"  class="current">Products</a>
-              <a href="/Student_4/Gallery/Gallery.html">Gallery</a>
-              <a href="/student_3/quiz_page/quiz.html">Quiz</a>
-              <a href="/Student_4/Sitemap/sitemap.html">Sitemap</a>
-              <a href="/student_3/about_us_page/students_details.html">About Us</a>
-          </div>
+        <div class="header-icon">
+          <img id="headerImg" src="/media//icons/header.png" alt="icon">
+          <h1>The Cookbook</h1>
+          <a
+            ><span
+              rel="preload"
+              class="material-symbols-outlined"
+              id="hamburgMenu"
+              >menu</span
+            ></a
+          >
+        </div>
+        <div class="header-links" id="links" style="display: flex">
+          <a href="/index.html">Home</a>
+          <a href="/student_1/products_page/products_page.html" class="current"
+            >Products</a
+          >
+          <a href="/Student_4/Gallery/Gallery.html">Gallery</a>
+          <a href="/student_3/quiz_page/quiz.html">Quiz</a>
+          <a href="/Student_4/Sitemap/sitemap.html">Sitemap</a>
+          <a href="/student_3/about_us_page/students_details.html">About Us</a>
+        </div>
       </div>
-  </header>   
+    </header>
 
     <div id="scroll-to-top">
       <a id="top"></a>
-      <a href="#top" class="scroll-to-top" >&#9650;</a>
+      <a href="#top" class="scroll-to-top">&#9650;</a>
     </div>
     <br>
     <h1 class="heading">The CookShop</h1>
     <div class="container content-section">
       <h2 class="container-header">Cooking Essentials</h2>
-      
-      <div class="shop-items">
 
+      <div class="shop-items">
         <div class="shop-item">
           <span class="shop-item-name">Chopping Board</span>
-            <img class="shop-item-image"
-              src="/student_1/student_1_media/chopping_board.png"
-            />
+          <img
+            class="shop-item-image"
+            src="/student_1/student_1_media/chopping_board.png"
+            alt="chopping board"
+         >
           <div class="shop-item-details">
             <span class="shop-item-price">$7.00</span>
             <button class="btn btn-primary shop-item-button" type="button">
@@ -53,9 +63,11 @@
 
         <div class="shop-item">
           <span class="shop-item-name">Food Container</span>
-            <img class="shop-item-image"
-              src="/student_1/student_1_media/food_container.png"
-            />
+          <img
+            class="shop-item-image"
+            src="/student_1/student_1_media/food_container.png"
+            alt="food container"
+         >
           <div class="shop-item-details">
             <span class="shop-item-price">$4.00</span>
             <button class="btn btn-primary shop-item-button" type="button">
@@ -66,9 +78,11 @@
 
         <div class="shop-item">
           <span class="shop-item-name">Kitchen Scale</span>
-            <img class="shop-item-image"
+          <img
+            class="shop-item-image"
             src="/student_1/student_1_media/kitchen_scale.png"
-          />
+            alt="kitchen scale"
+         >
           <div class="shop-item-details">
             <span class="shop-item-price">$15.00</span>
             <button class="btn btn-primary shop-item-button" type="button">
@@ -79,9 +93,11 @@
 
         <div class="shop-item">
           <span class="shop-item-name">Kitchen Knife</span>
-            <img class="shop-item-image"
+          <img
+            class="shop-item-image"
             src="/student_1/student_1_media/knife.png"
-          />
+            alt="kitchen knife"
+         >
           <div class="shop-item-details">
             <span class="shop-item-price">$12.00</span>
             <button class="btn btn-primary shop-item-button" type="button">
@@ -92,9 +108,11 @@
 
         <div class="shop-item">
           <span class="shop-item-name">Spatula</span>
-            <img class="shop-item-image"
+          <img
+            class="shop-item-image"
             src="/student_1/student_1_media/spatula.png"
-          />
+            alt="spatula"
+         >
           <div class="shop-item-details">
             <span class="shop-item-price">$3.00</span>
             <button class="btn btn-primary shop-item-button" type="button">
@@ -105,9 +123,11 @@
 
         <div class="shop-item">
           <span class="shop-item-name">Spice Rack</span>
-            <img class="shop-item-image"
+          <img
+            class="shop-item-image"
             src="/student_1/student_1_media/spice_rack.png"
-          />
+            alt="spice rack"
+         >
           <div class="shop-item-details">
             <span class="shop-item-price">$10.00</span>
             <button class="btn btn-primary shop-item-button" type="button">
@@ -115,48 +135,56 @@
             </button>
           </div>
         </div>
-
       </div>
-
     </div>
 
-  <div id="shopping-cart">
-    <div class="container content-section"><br><br>
-      <h2 class="container-header">SHOPPING CART</h2>
-      <div class="cart-row">
-        <span class="cart-item cart-header cart-column">ITEM</span>
-        <span class="cart-price cart-header cart-column">UNIT PRICE</span>
-        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    <div id="shopping-cart">
+      <div class="container content-section">
+        <br><br>
+        <h2 class="container-header">SHOPPING CART</h2>
+        <div class="cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">UNIT PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total">
+          <strong class="cart-total-title">Total</strong>
+          <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-ProceedToCheckout" type="button">
+          Proceed To Checkout
+        </button>
       </div>
-      <div class="cart-items"></div>
-      <div class="cart-total">
-        <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">$0</span>
-      </div>
-      <button class="btn btn-primary btn-ProceedToCheckout" type="button">Proceed To Checkout</button>
     </div>
-  </div>
 
     <div id="scroll-to-shopping-cart">
-      <a href="#shopping-cart" class="scroll-to-shopping-cart"><img src="/student_1/student_1_media/shopping_cart.png" alt=""></a>
-  </div>
-  <footer>
-    <div class="footer-container">
+      <a href="#shopping-cart" class="scroll-to-shopping-cart"
+        ><img src="/student_1/student_1_media/shopping_cart.png" alt=""
+     ></a>
+    </div>
+    <footer>
+      <div class="footer-container">
         <img src="media/icons/header.png" alt="" height="150">
         <div class="details">
-            <h2>The CookBook</h2>
-            <p>9 3/4,</p>
-            <p>Privet Drive</p>
-            <p>Colombo 07</p>
+          <h2>The CookBook</h2>
+          <p>9 3/4,</p>
+          <p>Privet Drive</p>
+          <p>Colombo 07</p>
         </div>
         <div class="icons">
-            <a href="https://www.facebook.com"><img src="media/icons/facebook.png" alt=""></a>
-            <a href="https://web.whatsapp.com"><img src="media/icons/whatsapp.png" alt=""></a>
-            <a href="https://www.instagram.com"><img src="media/icons/instagram.png" alt=""></a>
-            
+          <a href="https://www.facebook.com"
+            ><img src="media/icons/facebook.png" alt=""
+         ></a>
+          <a href="https://web.whatsapp.com"
+            ><img src="media/icons/whatsapp.png" alt=""
+         ></a>
+          <a href="https://www.instagram.com"
+            ><img src="media/icons/instagram.png" alt=""
+         ></a>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
     <script src="/script.js"></script>
     <script src="products_page.js"></script>
     <script src="/script.js"></script>
