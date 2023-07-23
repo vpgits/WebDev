@@ -1,3 +1,6 @@
+/* Student Role: student 1
+Student Name: Heshan Wanigasinghe  */
+
 * {
   padding: 0;
   margin: 0;
@@ -20,10 +23,6 @@ h3{
 }
 /* Center the splash screen and loading animation */
 .splash-screen {
-
-  /* background-color: #80b918; */
-/* background-color:black;
-opacity:0.95; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +36,6 @@ opacity:0.95; */
   text-align: center;
   align-items: center;
   z-index: 1;
-  /* margin-top: auto; */
 }
 
 .loader-container img {
@@ -66,7 +64,7 @@ opacity:0.95; */
 }
 
 .text #creators {
-  color: white; //5e5e5e
+  color: white; 
   font-size: 200px;
   font-weight:600;
 }
