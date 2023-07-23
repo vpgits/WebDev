@@ -1,5 +1,5 @@
-// Student Role: student_2
-// Student Name: M.B.V.Pesanjith
+// Student Role: student 1
+// Student Name: Heshan Wanigasinghe
 
 //creates a warning element to be appended to the DOM
 const warning = document.createElement("p");
@@ -72,7 +72,7 @@ function validateNumber(inputelement, length, warningmsg) {
 
 function validateEmail() {
   let email = document.getElementById("email");
-  var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //chatgpt
+  var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const warningText = document.querySelector(".warning.email");
   const parentElement = email.parentNode;
   warning.classList.add("email");
@@ -127,7 +127,7 @@ function validateExpiryDate() {
   const warningText = document.querySelector(".warning.expiry-date");
   const parentElement = date.parentElement;
   warning.classList.add("expiry-date");
-  var regex = /^\d+\/\d+$/; //chatgpt formatted like so checks for 12/24 format
+  var regex = /^\d+\/\d+$/; 
   if (warningText === null) {
     parentElement.appendChild(warning);
   } else {
@@ -206,8 +206,5 @@ function switchFormsOne() {
 
 //redirects user to comments page after successful submission
 function switchFormsTwo() {
-  // let output;
-  // output = validCard && cardName && validEmail && validExpDate;
-
   window.location.href = "/student_2/feedback_form/comments.html";
 }

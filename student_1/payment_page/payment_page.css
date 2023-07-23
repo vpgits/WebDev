@@ -1,8 +1,7 @@
-/* Student Role: student_2
-Student Name: M.B.V.Pesanjith  */
+/* Student Role: student 1
+Student Name: Heshan Wanigasinghe  */
 
 * {
-  /* -webkit-appearance: none; */
   border: none;
 }
 
@@ -27,11 +26,9 @@ body {
   font-size: 30px;
 }
 
-/* .  */
 #payment-details {
   font-size: 30px;
 }
-/* .  */
 
 .btns * {
   padding: 10px;
@@ -45,8 +42,6 @@ body {
   width: 330px;
   min-height: 450px;
   justify-content: center;
-  /* width:500px; */
-  /* justify-content:center; */
   background-color: #9dc08b;
   padding: 10px;
   margin: 10px;
@@ -152,7 +147,6 @@ input[type="date"] {
 
 input:focus,
 select:focus {
-  /* border:none; */
   outline: none;
   border-color: #007bff;
 }
@@ -163,17 +157,11 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-/* input[type="number"] {
-  -moz-appearance: textfield;
-} */
-
 footer {
   position: relative;
   width: 100%;
 }
 
-/*
-dont know */
 .shop-item {
   margin: 30px;
 }
