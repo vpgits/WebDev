@@ -1,13 +1,12 @@
 
 .container{
-    display:flex;
-    flex-direction:column;
     margin:0 auto;
     width:80vw;
+    display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     min-height:647px;
-    
 }
 
 .card{

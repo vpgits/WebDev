@@ -2,9 +2,45 @@ const startBtn = document.getElementById("start");
 const nxtBtn = document.getElementById("next");
 const welcomeCard = document.getElementById("welcomeCard");
 const questionCard = document.getElementById("questionCard");
-const questions = [" ", "Java CourseWork"];
-const answers=[["One","Two","Three","Four"],["One","Two","Three","Four"]];
-const correct = ["1", "2"];
+const questions = [
+    "Which fruit is known for its creamy texture and high healthy fat content?",
+    "Which cuisine is famous for its use of a variety of spices and herbs?",
+    "What is the main ingredient in traditional hummus?",
+    "Which type of pasta is shaped like small rice grains?",
+    "What is the primary ingredient in a classic Greek moussaka dish?",
+    "Which dairy product is used to make traditional Swiss cheese?",
+    "What is the key ingredient in the popular Indian dish, Chicken Tikka Masala?",
+    "Which spice is used to add a warm, sweet flavor in dishes like cinnamon rolls?",
+    "What is the main component of traditional Japanese miso soup?",
+    "What type of seafood is often used in a classic New England clam chowder?"
+];
+
+const answers=[
+    ["Orange","Banana","Avocado","Watermelon"],
+    ["Italian","Chinese","Mexican","Japanese"],
+    ["Chickpeas","Lentils","Black beans","Kidney beans"],
+    ["Penne","Fusilli","Orzo","Linguine"],
+    ["Eggplant","Potatoes","Zucchini","Cauliflower"],
+    ["Cow's milk","Goat's milk"," Sheep's milk","Buffalo's milk"],
+    ["Lamb","Chicken","Beef","Pork"],
+    ["Turmeric","Cumin","Cinnamon","Paprika"],
+    ["Tofu","Seaweed","Rice","Miso paste"],
+    ["Shrimp","Lobster","Crab","Clams"],
+];
+
+const correct = [
+    "Avocado",
+    "Mexican",
+    "Chickpeas",
+    "Orzo",
+    "Eggplant",
+    "Cow's milk",
+    "Chicken",
+    "Cinnamon",
+    "Miso paste",
+    "Clams"
+];
+ 
 const counterLim = questions.length;
 const parent = document.getElementById("container");
 
@@ -13,8 +49,6 @@ startBtn.addEventListener('click', ()=>{
     questionCard.style.display="flex";
     flipCards()
     timer();
-
-    
 })
 
 function timer(){

@@ -17,7 +17,7 @@ body{
     font-family: 'Lora', sans-serif;
     text-align: center;
     font-weight: 400;
-    background-color:#EDF1D6; //DBAC95
+    background-color:#EDF1D6; /*DBAC95*/
     color:black;
     width:100%;
     /* display:flex; */
@@ -285,8 +285,6 @@ ul {
     }
  
 }
-
-
 
 //https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557
 //https://coolors.co/palette/0fa3b1-b5e2fa-f9f7f3-eddea4-f7a072
