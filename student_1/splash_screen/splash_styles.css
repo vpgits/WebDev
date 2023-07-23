@@ -4,23 +4,26 @@ Student Name: Heshan Wanigasinghe  */
 * {
   padding: 0;
   margin: 0;
-  /* font-family: "Lora", serif; */
 }
+
 #video-background {
   position: fixed;
-  object-fit:cover;
+  object-fit: cover;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity:1;
+  opacity: 1;
+  background-color: #40513b;
 }
-h3{
-  color:white;
-  font-size:30px;
-  font-weight:600;
+
+h3 {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
 }
+
 /* Center the splash screen and loading animation */
 .splash-screen {
   display: flex;
@@ -38,9 +41,17 @@ h3{
   z-index: 1;
 }
 
-.loader-container img {
-  width: 200px;
-  height: 200px;
+/* Text */
+.text #website-name {
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.text #creators {
+  color: white;
+  font-size: 200px;
+  font-weight: 600;
 }
 
 /* Loading animation */
@@ -54,19 +65,6 @@ h3{
   border-radius: 50%;
   animation: rotate 2s linear infinite;
   margin-bottom: 30px;
-}
-
-/* Text */
-.text #website-name {
-  color: white;
-  font-size: 100px;
-  font-weight: bold;
-}
-
-.text #creators {
-  color: white; 
-  font-size: 200px;
-  font-weight:600;
 }
 
 @keyframes rotate {
