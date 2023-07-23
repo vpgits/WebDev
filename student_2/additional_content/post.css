@@ -1,6 +1,10 @@
 /* Student Role: student_2
 Student Name: M.B.V.Pesanjith  */
 
+*{
+    border:0;
+}
+
 main{
     margin:20px auto;
     width: 70vw;
