@@ -13,146 +13,135 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// updated main js (do not change, make new commits or delete.....thanks :) )
-
+// Executes when the DOM is fully loaded and ready for manipulation
 document.addEventListener("DOMContentLoaded", () => {
-  // Executes when the DOM is fully loaded and ready for manipulation
-
-  const removeCartItemButtons = document.getElementsByClassName("btn-danger");
   // Retrieves all elements with the class 'btn-danger' (remove buttons)
+  const removeCartItemButtons = document.getElementsByClassName("btn-danger");
 
-  const quantityInputs = document.getElementsByClassName("cart-quantity-input");
   // Retrieves all elements with the class 'cart-quantity-input' (quantity input fields)
+  const quantityInputs = document.getElementsByClassName("cart-quantity-input");
 
-  const addToCartButtons = document.getElementsByClassName("shop-item-button");
   // Retrieves all elements with the class 'shop-item-button' (add to cart buttons)
+  const addToCartButtons = document.getElementsByClassName("shop-item-button");
 
+  // Retrieves the first element with the class 'btn-ProceedToCheckout' (proceed to checkout button)
   const proceedToCheckoutButton = document.getElementsByClassName(
     "btn-ProceedToCheckout"
   )[0];
-  // Retrieves the first element with the class 'btn-ProceedToCheckout' (proceed to checkout button)
 
+  // Attaches a click event listener to each remove button
   Array.from(removeCartItemButtons).forEach((button) => {
     button.addEventListener("click", removeCartItem);
   });
-  // Attaches a click event listener to each remove button
 
+  // Attaches a change event listener to each quantity input field
   Array.from(quantityInputs).forEach((input) => {
     input.addEventListener("change", quantityChanged);
   });
-  // Attaches a change event listener to each quantity input field
 
+  // Attaches a click event listener to each add to cart button
   Array.from(addToCartButtons).forEach((button) => {
     button.addEventListener("click", addToCartClicked);
   });
-  // Attaches a click event listener to each add to cart button
 
-  proceedToCheckoutButton.addEventListener("click", purchaseClicked);
   // Attaches a click event listener to the proceed to checkout button
+  proceedToCheckoutButton.addEventListener("click", purchaseClicked);
 });
 
+// Executes when the purchase button is clicked
 function purchaseClicked() {
-  // Executes when the purchase button is clicked
+  // Retrieves the cart items container element
+  const cartItems = document.getElementsByClassName("cart-items")[0];
 
+  if (cartItems.children.length < 1) {
+    // If the cart is empty (no items in the cart), show an alert and return
+    alert("Cart is empty, add items to proceed to checkout");
+    return;
+  }
+
+  // If the cart is not empty, proceed with the checkout process
   window.localStorage.removeItem("cart");
 
   let cart = document.getElementById("shopping-cart").innerHTML;
 
-  window.localStorage.setItem("cart", cart); //student_2
+  window.localStorage.setItem("cart", cart);
 
   window.location.assign("/student_1/payment_page/payment_page.html");
-
-  // alert('Thank you for your purchase');
-  // // Displays an alert with a thank you message
-
-  // const cartItems = document.getElementsByClassName('cart-items')[0];
-  // // Retrieves the cart items container element
-
-  // while (cartItems.firstChild) {
-  //   cartItems.removeChild(cartItems.firstChild);
-  // }
-  // // Removes all child elements from the cart items container
-
-  // updateCartTotal();
-  // // Updates the total price of the cart
 }
 
+// Executes when a remove button is clicked
 function removeCartItem(event) {
-  // Executes when a remove button is clicked
-
-  const buttonClicked = event.target;
   // Retrieves the button element that triggered the event
+  const buttonClicked = event.target;
 
-  buttonClicked.parentElement.parentElement.remove();
   // Removes the entire row containing the remove button from the cart items
+  buttonClicked.parentElement.parentElement.remove();
 
-  updateCartTotal();
   // Updates the total price of the cart
+  updateCartTotal();
 }
 
+// Executes when the value of a quantity input field changes
 function quantityChanged(event) {
-  // Executes when the value of a quantity input field changes
-
-  const input = event.target;
   // Retrieves the input element that triggered the event
+  const input = event.target;
 
+  // Sets the input value to 1 if it is not a number or less than or equal to 0
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
   }
-  // Sets the input value to 1 if it is not a number or less than or equal to 0
 
-  updateCartTotal();
   // Updates the total price of the cart
+  updateCartTotal();
 }
 
+// Executes when an add to cart button is clicked
 function addToCartClicked(event) {
-  // Executes when an add to cart button is clicked
-
-  const button = event.target;
   // Retrieves the button element that triggered the event
+  const button = event.target;
 
-  const shopItem = button.parentElement.parentElement;
   // Retrieves the entire shop item container element
+  const shopItem = button.parentElement.parentElement;
 
-  const title = shopItem.querySelector(".shop-item-name").innerText;
   // Retrieves the title of the shop item
+  const title = shopItem.querySelector(".shop-item-name").innerText;
 
-  const price = shopItem.querySelector(".shop-item-price").innerText;
   // Retrieves the price of the shop item
+  const price = shopItem.querySelector(".shop-item-price").innerText;
 
-  const imageSrc = shopItem.querySelector(".shop-item-image").src;
   // Retrieves the source URL of the shop item's image
+  const imageSrc = shopItem.querySelector(".shop-item-image").src;
 
-  addItemToCart(title, price, imageSrc);
   // Adds the item to the cart
+  addItemToCart(title, price, imageSrc);
 
-  updateCartTotal();
   // Updates the total price of the cart
+  updateCartTotal();
 }
 
+//Executes when an item is added to the cart
 function addItemToCart(title, price, imageSrc) {
-  //Executes when an item is added to the cart
-
-  const cartRow = document.createElement("div");
   // Creates a new div element for the cart row
+  const cartRow = document.createElement("div");
 
-  cartRow.classList.add("cart-row");
   // Adds the class 'cart-row' to the cart row element
+  cartRow.classList.add("cart-row");
 
-  const cartItems = document.getElementsByClassName("cart-items")[0];
   // Retrieves the cart items container element
+  const cartItems = document.getElementsByClassName("cart-items")[0];
 
-  const cartItemNames = cartItems.getElementsByClassName("cart-item-title");
   // Retrieves all elements with the class 'cart-item-title' (existing cart item names)
+  const cartItemNames = cartItems.getElementsByClassName("cart-item-title");
 
+  // Checks if the item being added is already in the cart, displays an alert, and returns if it is
   for (let i = 0; i < cartItemNames.length; i++) {
     if (cartItemNames[i].innerText === title) {
       alert("This item is currently in the cart");
       return;
     }
   }
-  // Checks if the item being added is already in the cart, displays an alert, and returns if it is
 
+  // HTML content for the cart row, including the item image, title, price, quantity input, and remove button
   const cartRowContents = `
     <div class="cart-item cart-column">
       <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
@@ -163,63 +152,62 @@ function addItemToCart(title, price, imageSrc) {
       <input class="cart-quantity-input" type="number" value="1">
       <button class="btn btn-danger" type="button">REMOVE</button>
     </div>`;
-  // HTML content for the cart row, including the item image, title, price, quantity input, and remove button
 
-  cartRow.innerHTML = cartRowContents;
   // Sets the HTML content of the cart row element
+  cartRow.innerHTML = cartRowContents;
 
-  cartItems.appendChild(cartRow);
   // Appends the cart row element to the cart items container
+  cartItems.appendChild(cartRow);
 
+  // Attaches a click event listener to the remove button in the cart row
   cartRow
     .querySelector(".btn-danger")
     .addEventListener("click", removeCartItem);
-  // Attaches a click event listener to the remove button in the cart row
 
+  // Attaches a change event listener to the quantity input field in the cart row
   cartRow
     .querySelector(".cart-quantity-input")
     .addEventListener("change", quantityChanged);
-  // Attaches a change event listener to the quantity input field in the cart row
 }
 
+// Calculates and updates the total price of the cart
 function updateCartTotal() {
-  // Calculates and updates the total price of the cart
-
-  var cartItemContainer = document.getElementsByClassName("cart-items")[0];
   // Retrieves the cart items container element
+  var cartItemContainer = document.getElementsByClassName("cart-items")[0];
 
-  var cartRows = cartItemContainer.getElementsByClassName("cart-row");
   // Retrieves all elements with the class 'cart-row' (cart rows)
 
-  var total = 0;
-  // Initializes the total price to 0
+  var cartRows = cartItemContainer.getElementsByClassName("cart-row");
 
+  // Initializes the total price to 0
+  var total = 0;
+
+  // Retrieves each cart row element
   for (var i = 0; i < cartRows.length; i++) {
     var cartRow = cartRows[i];
-    // Retrieves each cart row element
 
-    var priceElement = cartRow.getElementsByClassName("cart-price")[0];
     // Retrieves the element with the class 'cart-price' (price of the item)
+    var priceElement = cartRow.getElementsByClassName("cart-price")[0];
 
+    // Retrieves the element with the class 'cart-quantity-input' (quantity of the item)
     var quantityElement = cartRow.getElementsByClassName(
       "cart-quantity-input"
     )[0];
-    // Retrieves the element with the class 'cart-quantity-input' (quantity of the item)
 
-    var price = parseFloat(priceElement.innerText.replace("$", ""));
     // Retrieves the price value and removes the '$' symbol
+    var price = parseFloat(priceElement.innerText.replace("$", ""));
 
-    var quantity = quantityElement.value;
     // Retrieves the quantity value
+    var quantity = quantityElement.value;
 
-    total = total + price * quantity;
     // Calculates the subtotal for the current item and adds it to the total
+    total = total + price * quantity;
   }
 
-  total = Math.round(total * 100) / 100;
   // Rounds the total price to two decimal places
+  total = Math.round(total * 100) / 100;
 
+  // Updates the total price display in the cart
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
-  // Updates the total price display in the cart
 }
