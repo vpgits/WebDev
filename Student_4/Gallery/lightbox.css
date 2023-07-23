@@ -30,9 +30,11 @@
     position: fixed;
     opacity: 1;
     transform: translate(-50%, -50%);
-    top: 65%;
-    left: 40%;
-    width: 550px;
+    /* top: 65%;
+    left: 10%; */
+    margin-left:-280px;
+    margin-top:70px;
+    width: 450px;
     z-index: 15;
 }
     
@@ -46,8 +48,8 @@ p{
 }
     
 .intro{
-      height: 300px;
-      width: 800px;
+      height: 320px;
+      width: 1000px;
       padding: 10px 30px 30px 30px ;
       border-radius: 5px;
       position: fixed;
@@ -70,6 +72,14 @@ p{
     z-index: 10;
     border: 1px solid black;
  }
+
+
+
+.intro > img{
+    margin:0;
+    padding:0;
+    
+}
        
       
 .gallery:hover p{
