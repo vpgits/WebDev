@@ -106,12 +106,12 @@ p {
 .pic:hover{
     transform: scale(1.05);
     transition: all 0.3s ease 0s;
-
 }
 
 .cards:hover {
     background-color: var(--Black_color);
     cursor:pointer;
+
 }
 
 .cards:hover, .cards:hover .pic{
@@ -119,6 +119,32 @@ p {
     transition: all 0.35s ease 0s;
 }
 
+.cards:hover .onhover {
+    display: block;
+    opacity: 1; 
+  }
+
+  /* to there */
+  
+  .onhover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0; 
+  }
+
+.discription {
+    display: block;
+}
+
+.discription:hover {
+    opacity: 0;
+}
+
+/* from here */
+  
 .cards h3, .cards p {
     text-align: center;
     font-size: 1.5rem;
