@@ -1,5 +1,5 @@
-/* student role: student 1
-   student name: Heshan Wanigasinghe */
+/* student role: student 2
+   student name: M.B.V. Pesanjith */
 
 .card-container {
   display: flex;
@@ -36,6 +36,7 @@
 
 .card img:hover {
   transform: scale(0.95);
+  transition: transform 0.5s ease-in-out;
 }
 
 .card-title {
