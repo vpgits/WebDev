@@ -149,3 +149,52 @@ body{
 .pharagraph {
     font-size: 1.2rem;
 }
+
+/* youtube video  */
+
+.youtube {
+    width: 92%;
+    height: 450px;
+    border-radius: 10px;
+    margin: 0% auto 50px auto;
+    padding-top:25px;
+    padding-bottom:25px;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+
+.youtube #video {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.774);
+    width: 625px;
+    height: 325px;   
+}
+
+.youtube #video2 {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.744);
+    width: 625px;
+    height: 325px;   
+}
+
+.youtube .videotitle1,
+.videotitle2 {
+    padding-bottom: 20px;
+    text-align: start;
+}
+
+.youtube .videotitle1 {
+   font-size: 1.075em;
+}
+
+.youtube .videotitle2 {
+    font-size: 0.93em;
+ }
+
+ iframe {
+    border: 4px solid white;
+    border-radius: 5px;
+ }
+
