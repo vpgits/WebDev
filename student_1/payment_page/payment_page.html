@@ -153,7 +153,7 @@
             <div class="mini-container">
               <input
                 type="email"
-                name="emal"
+                name="email"
                 id="email"
                 placeholder="Email Address"
                 title="email address ex: hi@thecookbook.com"
@@ -165,8 +165,7 @@
                 type="text"
                 id="cardNumber"
                 placeholder="Card Number"
-                title="Card Number ex: xxxx-xxxx-xxxx-xxxx"
-                oninput="return validateCreditCardNum()"
+                oninput="validateNumber('cardNumber', 16, 'Invalid credit card number')"
              >
             </div>
             <div class="mini-container">
@@ -174,7 +173,7 @@
                 type="text"
                 name="expiry"
                 id="expiry-date"
-                placeholder="12/24"
+                placeholder="MM/YY"
                 oninput="validateExpiryDate()"
              >
             </div>
@@ -216,8 +215,10 @@
           <p>Privet Drive</p>
           <p>Colombo 07</p>
           <p>
-            Editor of the page : 
-            <a href="/student_1/page_editor/page_editor.html">Heshan Wanigasinghe</a>
+            Editor of the page :
+            <a href="/student_1/page_editor/page_editor.html"
+              >Heshan Wanigasinghe</a
+            >
           </p>
         </div>
         <div class="icons">
