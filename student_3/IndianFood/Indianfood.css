@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Lora','serif';
+}
+body{
+    transition: all 1.5s ease;
+ 
+}
+.pyramid{
+    height:200px;
+    width:300px;
+    float:left;
+    padding:00px 0px 0px 00px;
+}
+.two{
+    height:200px;
+    width:300px;
+    float:right;
+}
+.food{
+    margin:60px;
+    background-color:#9DC08B;
+    border: solid #9DC08B 5px;
+    border-radius: 10px;
+    padding-bottom:50px
+}
+
+.HeroSection {
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.289),rgba(0, 0, 0, 0.739)),url(img/indian-butter-chicken-black-bowl-wooden-table.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+   
+}
+
+.HeroSection h1 {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 0.4mm;
+}
+
+.herolinks a {
+    text-decoration: underline;
+    color: black;
+}
+
+.headline{
+    width:100%;
+    height:100%;
+    font-size: 26px;
+    color:white;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background-color: rgba(0, 0, 0, 0.399);
+}
+
+.food {
+    padding: 25px 30px;
+    
+}
+
+.food .mainboxheadline {
+    text-align: center;
+    padding-bottom: 25px;
+    font-size: 2rem;
+}
+
+.food p,
+.musttry
+{
+   text-align: center;
+   line-height: 1.7rem;
+   letter-spacing: 0.07mm;
+   font-size: 1.3rem;
+}
+
+.musttry {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/* 01st green box left sided image */
+
+.greenbox {
+    width: 92%;
+    height: 300px;
+    background-color: #9DC08B;
+    border-radius: 10px;
+    margin: 0% auto 50px auto;
+
+}
+
+.greenbox .imageboxleft img {
+    max-width: 92%;
+    max-height: 300px;
+    border-radius: 10px 0px 0px 10px;
+    float: left;
+    padding-right: 40px;
+}
+
+.greenbox .imageboxright img {
+    max-width: 92%;
+    max-height: 300px;
+    border-radius: 0px 10px 10px 0px;
+    float: right;
+    padding-left: 40px;
+
+}
+
+.description {
+    display: flex-box;
+    justify-content: center;
+    align-items: center;
+
+    padding: 65px 30px 25px 30px;
+    line-height: 1.7rem;
+    letter-spacing: 0.07mm;
+    
+}
+
+.pheadline {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 25px;
+    font-weight: 700;
+}
+
+.pharagraph {
+    font-size: 1.2rem;
+}
