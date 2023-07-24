@@ -1,3 +1,6 @@
+// Student Name: Ayyoob Ajward
+// Student Number: 03
+
 const startBtn = document.getElementById("start");
 const nxtBtn = document.getElementById("next");
 const welcomeCard = document.getElementById("welcomeCard");
