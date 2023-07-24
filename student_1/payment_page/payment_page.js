@@ -206,9 +206,9 @@ async function validateAndSubmitTwo(e) {
     "Invalid credit card number"
   );
   const validExpDate = await validateExpiryDate();
-  const validCSV = await validateNumber("csv", 3, "Invalid CSV");
+  const validCVV = await validateNumber("csv", 3, "Invalid CVV");
 
-  if (!(validCname && validEmail && validCardNum && validExpDate && validCSV)) {
+  if (!(validCname && validEmail && validCardNum && validExpDate && validCVV)) {
     e.preventDefault();
     alert("Please fill all fields. Hover to guide");
   }
