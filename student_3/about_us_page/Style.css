@@ -10,10 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color:var(--Black_color);
-    letter-spacing: 0.4px;
-    word-spacing: 2px;
-
 }
 
 html{
@@ -22,6 +18,7 @@ html{
 
 body{
     background-color:#ffffff;
+    letter-spacing: 0.07mm;
 }
 
 .Hero {
@@ -47,12 +44,12 @@ body{
 p {
     font-size: 1.2rem;
     color: var(--White_color);
-    text-align: center;
     line-height: 1.8rem;
 }
 
 .about {
     padding:0px 300px ;
+    letter-spacing: 0.7mm;
 }
 
 .Hero img {
