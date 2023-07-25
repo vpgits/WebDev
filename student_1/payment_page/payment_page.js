@@ -54,7 +54,7 @@ function validateName(inputelement, parentelement) {
   return isValid;
 }
 
-// Function to check if the name is valid (n input without symbols and/or numbers)
+// Function to check if the name is valid (input without symbols and/or numbers)
 function isNameValid(name) {
   // loops through each letter in the entered name to check if an invalid character is entered
   for (let i = 0; i < name.length; i++) {
@@ -206,9 +206,9 @@ async function validateAndSubmitTwo(e) {
     "Invalid credit card number"
   );
   const validExpDate = await validateExpiryDate();
-  const validCVV = await validateNumber("csv", 3, "Invalid CVV");
+  const validCSV = await validateNumber("csv", 3, "Invalid CSV");
 
-  if (!(validCname && validEmail && validCardNum && validExpDate && validCVV)) {
+  if (!(validCname && validEmail && validCardNum && validExpDate && validCSV)) {
     e.preventDefault();
     alert("Please fill all fields. Hover to guide");
   }
